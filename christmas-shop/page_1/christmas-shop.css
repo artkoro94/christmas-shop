@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-style: normal; 
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    max-width: 1440px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    width: 1440px;
+    height: 64px;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1276px;
+    height: 64px;
+}
+
+.label_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 141px;
+    height: 40px;
+
+}
+
+.label_box_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 101px;
+    height: 32px;
+}
+
+.label_text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+    
+    margin: 0;
+}
+
+.menu_box {
+    display: flex;
+    justify-content: space-between;
+    width: 376px;
+    height: 40px;
+}
+
+.menu_item_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 40px;
+}
+
+.part_gifts {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+}
+
+.menu_item_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 40px;
+}
+
+.part_about {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29; 
+}
+
+.menu_item_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 40px;
+}
+
+.part_best {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29; 
+}
+
+.menu_item_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 40px;
+}
+
+.part_contacts {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29; 
+}
+
+.hero {
+    width: 1440px;
+    height: 524px;
+    border-radius: 20px 20px 0px 0px;
+    opacity: 0px;
+    background-color: #FF4646;
+}
+
+.bg_1 {
+    width: 1440px;
+    height: 524px;
+    background-image: url(../assets/background/bg-snow.png);
+}
+
+.bg_2 {
+    width: 1440px;
+    height: 524px;
+    background-image: url(../assets/background/bg-ball.png)
+}
