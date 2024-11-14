@@ -5,6 +5,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: Allura;
+    src: url(../fonts/Allura-Regular.ttf);
+    font-style: normal; 
+    font-weight: normal;
+}
+
 body {
     margin: 0;
     max-width: 1440px;
@@ -152,13 +159,111 @@ header {
 }
 
 .bg_1 {
-    width: 1440px;
-    height: 524px;
-    background-image: url(../assets/background/bg-snow.png);
+    background-image: url(../assets/background/snow_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .bg_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/background/ball_bg.png);
     width: 1440px;
     height: 524px;
-    background-image: url(../assets/background/bg-ball.png)
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ball_block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 426px;
+    height: 404px;
+}
+
+.ball_title {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    
+    margin: 60px 0 0 0;
+}
+
+.main_title {
+    width: 426px;
+    height: 144px;
+
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+
+    margin: 12px 0 0 0;
+}
+
+.main_button {
+    width: 235px;
+    height: 56px;
+    border-radius: 20px;
+    background-color: #181C29;
+    border: 0px;
+
+    margin-top: 12px;
+}
+
+.main_button_text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+}
+
+.ball_text_under {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+
+    margin: 12px 0 0 0;
+}
+
+.about {
+    display: flex;
+    width: 1440px;
+    height: 648px;
+    background-color: #FF4646;
+}
+
+.about_bg {
+    width: 1440px;
+    height: 648px;
+    background-image: url(../assets/background/about_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
