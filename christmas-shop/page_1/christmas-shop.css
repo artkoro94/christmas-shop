@@ -359,6 +359,8 @@ header {
     width: 1440px;
     height: 488px;
     background-color: #FF4646;
+
+    overflow: hidden;
 }
 
 .slider_bg {
@@ -464,6 +466,8 @@ header {
     border: 1px solid #FFFFFF66;
     border-radius: 20px;
     background-color: transparent;
+
+    padding: 0;
 }
 
 .arrow_left {
@@ -483,10 +487,515 @@ header {
     border: 1px solid #FFFFFF;
     border-radius: 20px;
     background-color: transparent;
+
+    padding: 0;
 }
 
 .arrow_right {
     width: 12.5px;
     height: 12px;
     background-image: url(../assets/svg/arrow_right.svg);
+}
+
+.best_gifts {
+    width: 1440px;
+    height: 554px;
+    background-color: #FF4646;
+}
+
+.best_gifts_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 1440px;
+    height: 554px;
+    
+    background-image: url(../assets/background/best_gifts_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.best_gifts_title {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    -decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+    padding-top: 60px;
+}
+
+.best_gifts_text {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+
+    margin: 0;
+    padding-top: 12px;
+}
+
+.gift_cards_container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1276px;
+    height: 342px;
+
+    padding-top: 20px;
+}
+
+.gift_card {
+    width: 310px;
+    height: 342px;
+    border-radius: 20px;
+    background-color: #ECF3F8;
+}
+
+.gift_text_block {
+    width: 310px;
+    height: 112px;
+
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.gift_title_1 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #4361FF;
+
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.gift_title_2 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #06A44F;
+
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.gift_title_3 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #4361FF;
+
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.gift_title_4 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FF43F7;
+
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.gift_text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24.32px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+
+    margin: 0;
+    padding: 8px 0 0 20px;
+}
+
+.CTA {
+    width: 1440px;
+    height: 668px;
+
+    background-color: #FF4646;
+}
+
+.CTA_bg {
+    width: 1440px;
+    height: 668px;
+    
+    background-image: url(../assets/background/CTA_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.CTA_bg_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 1440px;
+    height: 668px;
+
+    background-image: url(../assets/background/bg_CTA_2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.CTA_text {
+    width: 426px;
+    height: 108px;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 180px 0 0 0;
+}
+
+.CTA_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 235px;
+    height: 56px;
+    border-radius: 20px;
+    border: 0;
+
+    background-color: #181C29;
+
+    padding: 0;
+    margin-top: 20px;
+}
+
+.CTA_button_text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+}
+
+.CTA_h2 {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+
+    margin: 20px 0 0 0;
+}
+
+.CTA_timer {
+    width: 344px;
+    height: 72px;
+
+    border-radius: 20px;
+    background-color: #FFFFFF66;
+
+    margin: 8px 0 0 0;
+}
+
+.CTA_timer_container {
+    display: flex;
+
+    width: 320px;
+    height: 52px;
+
+    padding: 8px 12px 12px 12px;
+}
+
+.timer_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 80px;
+    height: 52px;
+    
+}
+
+.timer_border {
+    align-self: center;
+    border: 1px solid #FFFFFF66;
+    height: 20px;
+}
+
+.days_number {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.days_word {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.hours_number {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.hours_word {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.minutes_number {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.minutes_word {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.seconds_number {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.seconds_word {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 1440px;
+    height: 496px;
+
+}
+
+.connection_block {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1276px;
+    height: 204px;
+
+    margin-top: 60px;
+}
+
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 417.33px;
+    height: 204px;
+
+    border-radius: 20px;
+    background-color: #ECF3F8;
+}
+
+.footer_pic {
+    width: 80px;
+    height: 80px;
+
+    padding-top: 20px;
+}
+
+.container_text_1 {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+
+    margin: 0;
+    padding-top: 12px;
+}
+
+.container_text_2 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24.32px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+
+    margin: 0;
+    padding-top: 12px;
+}
+
+.media_container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 196px;
+    height: 40px;
+
+    margin-top: 60px;
+}
+
+.media_block {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_2025 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+
+    margin: 12px 0 0 0;
+}
+
+.footer_rss {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+
+    margin: 12px 0 0 0;
 }
