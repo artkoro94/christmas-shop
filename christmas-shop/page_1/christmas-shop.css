@@ -12,8 +12,17 @@
     font-weight: normal;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 body {
-    margin: 0;
+    margin: auto;
     max-width: 1440px;
 }
 
@@ -76,6 +85,23 @@ header {
     align-items: center;
     width: 78px;
     height: 40px;
+
+    transition: 0.3s;
+}
+
+.menu_item_1:hover span {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
+.menu_item_1:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: 78px;
+    height: 40px;
+    background-color: #FF46461A;
+    border-radius: 12px;
 }
 
 .part_gifts {
@@ -88,6 +114,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29;
+
+    transition: 0.3s;
 }
 
 .menu_item_2 {
@@ -96,6 +124,23 @@ header {
     align-items: center;
     width: 88px;
     height: 40px;
+
+    transition: 0.3s;
+}
+
+.menu_item_2:hover span {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
+.menu_item_2:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: 88px;
+    height: 40px;
+    background-color: #FF46461A;
+    border-radius: 12px;
 }
 
 .part_about {
@@ -107,7 +152,9 @@ header {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #181C29; 
+    color: #181C29;
+
+    transition: 0.3s;
 }
 
 .menu_item_3 {
@@ -116,6 +163,23 @@ header {
     align-items: center;
     width: 74px;
     height: 40px;
+
+    transition: 0.3s;
+}
+
+.menu_item_3:hover span {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
+.menu_item_3:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: 74px;
+    height: 40px;
+    background-color: #FF46461A;
+    border-radius: 12px;
 }
 
 .part_best {
@@ -128,6 +192,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29; 
+
+    transition: 0.3s;
 }
 
 .menu_item_4 {
@@ -136,6 +202,23 @@ header {
     align-items: center;
     width: 112px;
     height: 40px;
+
+    transition: 0.3s;
+}
+
+.menu_item_4:hover span {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
+.menu_item_4:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: 112px;
+    height: 40px;
+    background-color: #FF46461A;
+    border-radius: 12px;
 }
 
 .part_contacts {
@@ -148,6 +231,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29; 
+
+    transition: 0.3s;
 }
 
 .hero {
@@ -224,6 +309,19 @@ header {
     border: 0px;
 
     margin-top: 12px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main_button:hover {
+    transition: 0.3s;
+    background-color: #FFFFFF;
+}
+
+.main_button:hover span  {
+    transition: 0.3s;
+    color: #181C29;
 }
 
 .main_button_text {
@@ -236,6 +334,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: white;
+
+    transition: 0.3s;
 }
 
 .ball_text_under {
@@ -565,6 +665,16 @@ header {
     background-color: #ECF3F8;
 }
 
+.gift_card:hover {
+    cursor: pointer;
+}
+
+.gift_card:hover p {
+    cursor: pointer;
+    color: #FF4646;
+    transition: 0.3s;
+}
+
 .gift_text_block {
     width: 310px;
     height: 112px;
@@ -646,6 +756,12 @@ header {
 
     margin: 0;
     padding: 8px 0 0 20px;
+
+    transition: 0.3s;
+}
+
+.gift_text:hover {
+    color: red;
 }
 
 .CTA {
@@ -710,6 +826,20 @@ header {
 
     padding: 0;
     margin-top: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.CTA_button:hover {
+    transition: 0.3s;
+    background-color: #FFFFFF;
+}
+
+.CTA_button:hover span  {
+    transition: 0.3s;
+    color: #181C29;
 }
 
 .CTA_button_text {
@@ -917,6 +1047,15 @@ footer {
     background-color: #ECF3F8;
 }
 
+.contact_container:hover {
+    cursor: pointer;
+}
+
+.contact_container:hover p {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
 .footer_pic {
     width: 80px;
     height: 80px;
@@ -937,6 +1076,8 @@ footer {
 
     margin: 0;
     padding-top: 12px;
+
+    transition: 0.3s;
 }
 
 .container_text_2 {
@@ -952,6 +1093,8 @@ footer {
 
     margin: 0;
     padding-top: 12px;
+
+    transition: 0.3s;
 }
 
 .media_container {
@@ -971,6 +1114,70 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.media_img_1 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/tg.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_1 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/tg_red.svg);
+}
+
+.media_img_2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/facebook.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_2 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/facebook_red.svg);
+}
+
+.media_img_3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/instagram.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_3 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/instagram_red.svg);
+}
+
+.media_img_4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/X.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_4 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/X_red.svg);
 }
 
 .footer_2025 {
