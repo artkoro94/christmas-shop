@@ -383,6 +383,7 @@ header {
 
 .gift_card:hover p {
     color: #FF4646;
+    transition: 0.3s;
 }
 
 .gift_text_block {
@@ -466,6 +467,8 @@ header {
 
     margin: 0;
     padding: 8px 0 0 20px;
+
+    transition: 0.3s;
 }
 
 footer {
@@ -500,6 +503,15 @@ footer {
     background-color: #ECF3F8;
 }
 
+.contact_container:hover {
+    cursor: pointer;
+}
+
+.contact_container:hover p {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
 .footer_pic {
     width: 80px;
     height: 80px;
@@ -520,6 +532,8 @@ footer {
 
     margin: 0;
     padding-top: 12px;
+
+    transition: 0.3s;
 }
 
 .container_text_2 {
@@ -535,6 +549,8 @@ footer {
 
     margin: 0;
     padding-top: 12px;
+
+    transition: 0.3s;
 }
 
 .media_container {
@@ -554,6 +570,77 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.3s;
+}
+
+.media_img_1 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/tg.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_1 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/tg_red.svg);
+}
+
+.media_img_2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/facebook.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_2 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/facebook_red.svg);
+}
+
+.media_img_3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/instagram.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_3 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/instagram_red.svg);
+}
+
+.media_img_4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/footer/X.svg);
+    width: 24px;
+    height: 24px;
+
+    transition: 0.3s;
+}
+
+.media_block:hover .media_img_4 {
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url(../assets/footer/X_red.svg);
 }
 
 .footer_2025 {
@@ -581,4 +668,12 @@ footer {
     color: #181C29;
 
     margin: 12px 0 0 0;
+
+    transition: 0.3s;
+}
+
+.footer_rss:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #FF4646;
 }
