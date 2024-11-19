@@ -367,7 +367,7 @@ header {
     width: 1440px;
     height: 648px;
     background-image: url(../assets/background/about_bg.png);
-    background-size: 100%;
+    background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -798,7 +798,7 @@ header {
     height: 668px;
     
     background-image: url(../assets/background/CTA_bg.png);
-    background-size: 100%;
+    background-size: 111%;
     background-repeat: no-repeat;
     background-position: center;
 }
