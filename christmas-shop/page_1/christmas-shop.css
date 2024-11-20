@@ -58,6 +58,11 @@ header {
     height: 32px;
 }
 
+.label_box_2:hover {
+    cursor: pointer;
+    
+}
+
 .label_text {
     font-family: Montserrat;
     font-size: 12px;
