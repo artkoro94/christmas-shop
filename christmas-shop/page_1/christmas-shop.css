@@ -29,7 +29,7 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    width: 1440px;
+    max-width: 1440px;
     height: 64px;
 }
 
@@ -60,7 +60,6 @@ header {
 
 .label_box_2:hover {
     cursor: pointer;
-    
 }
 
 .label_text {
@@ -241,7 +240,7 @@ header {
 }
 
 .hero {
-    width: 1440px;
+    max-width: 1440px;
     height: 524px;
     border-radius: 20px 20px 0px 0px;
     opacity: 0px;
@@ -260,7 +259,7 @@ header {
     justify-content: center;
     align-items: center;
     background-image: url(../assets/background/ball_bg.png);
-    width: 1440px;
+    max-width: 1440px;
     height: 524px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -359,7 +358,7 @@ header {
 
 .about {
     display: flex;
-    width: 1440px;
+    max-width: 1440px;
     height: 648px;
     background-color: #FF4646;
 }
@@ -369,7 +368,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    width: 1440px;
+    width: 100%;
     height: 648px;
     background-image: url(../assets/background/about_bg.png);
     background-size: 108%;
@@ -382,7 +381,7 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    width: 1276px;
+    width: 89%;
     height: 528px;
 
     border-radius: 20px;
@@ -393,15 +392,13 @@ header {
     display: flex;
     flex-direction: column;
 
-    width: 426px;
-    height: 328px;
+    width: 82%;
 
-    margin-left: 60px;
+    margin: 46px 60px;
 }
 
 .about_title {
-    width: 426px;
-    height: 24px;
+    max-width: 426px;
     
     font-family: Allura;
     font-size: 24px;
@@ -414,12 +411,10 @@ header {
     color: #FF4646;
 
     margin: 0;
-    padding-top: 60px;
 }
 
 .about_h2 {
-    width: 426px;
-    height: 72px;
+    max-width: 70%;
 
     font-family: Montserrat;
     font-size: 24px;
@@ -436,8 +431,7 @@ header {
 }
 
 .about_text {
-    width: 426px;
-    height: 72px;
+    max-width: 79%;
 
     font-family: Montserrat;
     font-size: 16px;
@@ -452,16 +446,30 @@ header {
     padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+    .about_text {
+
+    }
+}
+
 .santa_img {
     display: flex;
-
     width: 638px;
     height: 528px;
     border-radius: 20px;
 }
 
+.santa_img_box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
 .slider {
-    width: 1440px;
+    max-width: 1440px;
     height: 488px;
     background-color: #FF4646;
 
@@ -473,7 +481,7 @@ header {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
+    width: 100%;
     height: 488px;
 
     background-image: url(../assets/background/slider_bg.png);
@@ -553,7 +561,7 @@ header {
 .slider_block {
     display: flex;
     justify-content: flex-end;
-    width: 1276px;
+    width: 90%;
     height: 56px;
 
     margin-top: 20px;
@@ -625,8 +633,7 @@ header {
 }
 
 .best_gifts {
-    width: 1440px;
-    height: 554px;
+    max-width: 1440px;
     background-color: #FF4646;
 }
 
@@ -635,8 +642,7 @@ header {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
-    height: 554px;
+    width: 100%;
     
     background-image: url(../assets/background/best_gifts_bg.png);
     background-size: 100%;
@@ -677,12 +683,20 @@ header {
 
 .gift_cards_container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    width: 1276px;
-    height: 342px;
+    gap: 12px;
+
+    width: 90%;
 
     padding-top: 20px;
+}
+
+@media (max-width:768px) {
+    .gift_cards_container {
+
+    }
 }
 
 .gift_card {
@@ -792,7 +806,7 @@ header {
 }
 
 .CTA {
-    width: 1440px;
+    max-width: 1440px;
     height: 668px;
 
     background-color: #FF4646;
@@ -801,7 +815,7 @@ header {
 }
 
 .CTA_bg {
-    width: 1440px;
+    width: 100%;
     height: 668px;
     
     background-image: url(../assets/background/CTA_bg.png);
@@ -815,14 +829,14 @@ header {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
+    width: 100%;
     height: 668px;
 
 
     background-image: url(../assets/background/bg_CTA_2.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 .CTA_text {
@@ -1050,17 +1064,18 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
-    height: 496px;
+    max-width: 1440px;
 
+    margin-bottom: 60px;
 }
 
 .connection_block {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    width: 1276px;
-    height: 204px;
+    gap: 12px;
+    width: 100%;
 
     margin-top: 60px;
 }
