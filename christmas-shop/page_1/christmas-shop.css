@@ -13,6 +13,7 @@
 }
 
 * {
+    margin: 0;
     scroll-behavior: smooth;
 }
 
@@ -39,6 +40,12 @@ header {
     align-items: center;
     width: 1276px;
     height: 64px;
+}
+
+@media (max-width: 768px) {
+    .header_container {
+        margin: 0 18px 0 7px;
+    }
 }
 
 .label_box {
@@ -81,6 +88,12 @@ header {
     justify-content: space-between;
     width: 376px;
     height: 40px;
+}
+
+@media (max-width: 768px) {
+    .menu_box {
+        display: none;
+    }
 }
 
 .menu_item_1 {
@@ -145,6 +158,20 @@ header {
     height: 40px;
     background-color: #FF46461A;
     border-radius: 12px;
+}
+
+.burger_icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .burger_icon {
+        display: flex;
+        width: 20px;
+        height: 8px;
+        border-top: 1px solid #181C29;
+        border-bottom: 1px solid #181C29;
+    }
 }
 
 .part_about {
@@ -254,6 +281,14 @@ header {
     background-position: center;
 }
 
+@media (max-width: 1439px) {
+    .bg_1 {
+        background-size: cover;
+    }
+}
+
+
+
 .bg_2 {
     display: flex;
     justify-content: center;
@@ -261,7 +296,7 @@ header {
     background-image: url(../assets/background/ball_bg.png);
     max-width: 1440px;
     height: 524px;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -376,6 +411,12 @@ header {
     background-position: center;
 }
 
+@media (max-width: 1439px) {
+    .about_bg {
+        background-size: cover;
+    }
+}
+
 .about_container {
     display: flex;
     align-items: center;
@@ -387,6 +428,13 @@ header {
     border-radius: 20px;
     background-color: white;
 }
+
+@media (max-width: 768px) {
+    .about_container {
+    width: 98%;
+  }
+}
+
 
 .about_text_block {
     display: flex;
@@ -414,7 +462,7 @@ header {
 }
 
 .about_h2 {
-    max-width: 70%;
+    max-width: 100%;
 
     font-family: Montserrat;
     font-size: 24px;
@@ -431,7 +479,7 @@ header {
 }
 
 .about_text {
-    max-width: 79%;
+    width: 426px;
 
     font-family: Montserrat;
     font-size: 16px;
@@ -446,10 +494,10 @@ header {
     padding-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .about_text {
-
-    }
+    width: 100%;
+  }
 }
 
 .santa_img {
@@ -468,6 +516,14 @@ header {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .santa_img_box {
+    width: 120%;
+  }
+}
+
+
+
 .slider {
     max-width: 1440px;
     height: 488px;
@@ -479,21 +535,17 @@ header {
 .slider_bg {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     width: 100%;
     height: 488px;
 
     background-image: url(../assets/background/slider_bg.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .slider_title {
-    width: 426px;
-    height: 24px;
-
     font-family: Allura;
     font-size: 24px;
     font-weight: 400;
@@ -508,6 +560,8 @@ header {
 }
 
 .slider_text {
+    align-self: center;
+
     width: 426px;
     height: 36px;
     
@@ -521,20 +575,25 @@ header {
     text-decoration-skip-ink: none;
     color: white;
 
-    margin: 12px 0 0 0;
+    margin: 12px 0 20px 0;
 }
 
 .carousel {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
-    width: 1993px;
+    max-width: 100%;
     height: 200px;
     
-
     gap: 23px;
-    margin: 20px 0 0 172px;
+    padding-left: 6%;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        padding-left: 8px;
+  }
 }
 
 .carousel_text {
@@ -565,6 +624,12 @@ header {
     height: 56px;
 
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .slider_block {
+        width: 99%;
+  }
 }
 
 .button_block {
@@ -634,21 +699,8 @@ header {
 
 .best_gifts {
     max-width: 1440px;
-    height: 554px;
 
     background-color: #FF4646;
-}
-
-@media (max-width: 1420px) {
-    .best_gifts {
-        height: 908px;
-    }
-}
-
-@media (max-width: 705px) {
-    .best_gifts {
-        height: 1616px;
-    }
 }
 
 .best_gifts_bg {
@@ -662,6 +714,8 @@ header {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+
+    padding-bottom: 60px;
 }
 
 .best_gifts_title {
@@ -695,6 +749,8 @@ header {
     padding-top: 12px;
 }
 
+
+
 .gift_cards_container {
     display: flex;
     flex-wrap: wrap;
@@ -707,15 +763,15 @@ header {
     padding-top: 20px;
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1418px) {
     .gift_cards_container {
-        width: 752px;
+        width: 700px;
     }
 }
 
-@media (max-width: 705px) {
+@media (max-width: 767px) {
     .gift_cards_container {
-        width: 364px;
+        width: 320px;
     }
 }
 
@@ -1100,6 +1156,19 @@ footer {
     margin-top: 60px;
 }
 
+@media (max-width: 1418px) {
+    .connection_block {
+        width: 752px;
+    }
+}
+
+@media (max-width: 767px) {
+    .connection_block {
+        width: 364px;
+    }
+}
+
+
 .contact_container {
     display: flex;
     flex-direction: column;
@@ -1110,6 +1179,22 @@ footer {
 
     border-radius: 20px;
     background-color: #ECF3F8;
+}
+
+@media (max-width: 1418px) {
+    .contact_container {
+        width: 752px;
+        height: 204px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .contact_container {
+        width: 364px;
+        height: 204px;
+
+    }
 }
 
 .contact_container:hover {
