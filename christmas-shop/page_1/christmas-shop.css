@@ -634,7 +634,21 @@ header {
 
 .best_gifts {
     max-width: 1440px;
+    height: 554px;
+
     background-color: #FF4646;
+}
+
+@media (max-width: 1420px) {
+    .best_gifts {
+        height: 908px;
+    }
+}
+
+@media (max-width: 705px) {
+    .best_gifts {
+        height: 1616px;
+    }
 }
 
 .best_gifts_bg {
@@ -693,9 +707,15 @@ header {
     padding-top: 20px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 1420px) {
     .gift_cards_container {
+        width: 752px;
+    }
+}
 
+@media (max-width: 705px) {
+    .gift_cards_container {
+        width: 364px;
     }
 }
 
