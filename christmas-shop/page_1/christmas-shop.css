@@ -44,7 +44,7 @@ header {
 
 @media (max-width: 768px) {
     .header_container {
-        margin: 0 18px 0 7px;
+        margin: 0 7px;
     }
 }
 
@@ -158,6 +158,32 @@ header {
     height: 40px;
     background-color: #FF46461A;
     border-radius: 12px;
+}
+
+.burger_container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .burger_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger_container:hover  {
+        cursor: pointer;
+        background-image: url(../assets/svg/burger_icon/X.svg);
+        transition: 1s;
+    }
+
+    .burger_container:hover .burger_icon {
+        display: none;
+        transition: 1s;
+        
+    }
 }
 
 .burger_icon {
@@ -274,6 +300,12 @@ header {
     background-color: #FF4646;
 }
 
+@media (max-width: 468px) {
+    .hero {
+        height: auto;
+    }
+}
+
 .bg_1 {
     background-image: url(../assets/background/snow_bg.png);
     background-size: 100%;
@@ -287,8 +319,6 @@ header {
     }
 }
 
-
-
 .bg_2 {
     display: flex;
     justify-content: center;
@@ -301,12 +331,24 @@ header {
     background-position: center;
 }
 
+@media (max-width: 380px) {
+    .bg_2 {
+        height: 574px;
+    }
+}
+
 .ball_block {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 426px;
+    width: 100%;
     height: 404px;
+}
+
+@media (max-width: 380px) {
+    .ball_block {
+        height: auto;
+    }
 }
 
 .ball_title {
@@ -323,9 +365,14 @@ header {
     margin: 60px 0 0 0;
 }
 
+@media (max-width: 380px) {
+    .ball_title {
+        margin: 0;
+    }
+}
+
 .main_title {
     width: 426px;
-    height: 144px;
 
     font-family: Montserrat;
     font-size: 32px;
@@ -338,6 +385,12 @@ header {
     color: white;
 
     margin: 12px 0 0 0;
+}
+
+@media (max-width: 468px) {
+    .main_title {
+        width: 90%;
+    }
 }
 
 .main_button {
@@ -398,6 +451,13 @@ header {
     background-color: #FF4646;
 }
 
+@media (max-width: 767px) {
+    .about {
+        height: auto;
+        padding-top: 60px;
+  }
+}
+
 .about_bg {
     display: flex;
     justify-content: center;
@@ -417,13 +477,18 @@ header {
     }
 }
 
+@media (max-width: 767px) {
+    .about_bg {
+        height: auto;
+  }
+}
+
 .about_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 89%;
-    height: 528px;
 
     border-radius: 20px;
     background-color: white;
@@ -435,6 +500,19 @@ header {
   }
 }
 
+@media (max-width: 767px) {
+    .about_container {
+        width: 83%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+    .about_container {
+        width: 95%;
+    }
+}
+
 
 .about_text_block {
     display: flex;
@@ -443,6 +521,13 @@ header {
     width: 82%;
 
     margin: 46px 60px;
+}
+
+@media (max-width: 380px) {
+    .about_text_block {
+        width: 100%;
+        margin: 58px 19px;
+  }
 }
 
 .about_title {
@@ -557,6 +642,12 @@ header {
     color: white;
 
     margin: 60px 0 0 0;
+}
+
+@media (max-width: 380px) {
+    .slider_title {
+        margin: 120px 0 0 0;
+  }
 }
 
 .slider_text {
@@ -732,6 +823,12 @@ header {
 
     margin: 0;
     padding-top: 60px;
+}
+
+@media (max-width: 380px) {
+    .best_gifts_title {
+        padding-top: 120px;
+  }
 }
 
 .best_gifts_text {
@@ -915,9 +1012,14 @@ header {
     background-position: bottom;
 }
 
+@media (max-width: 380px) {
+    .CTA_bg_2 {
+        height: 710px;
+  }
+}
+
 .CTA_text {
     width: 426px;
-    height: 108px;
 
     font-family: Montserrat;
     font-size: 24px;
@@ -930,6 +1032,12 @@ header {
     color: #FFFFFF;
 
     margin: 180px 0 0 0;
+}
+
+@media (max-width: 468px) {
+    .CTA_text {
+        width: 100%;
+    }
 }
 
 .CTA_button {
@@ -1165,6 +1273,12 @@ footer {
 @media (max-width: 767px) {
     .connection_block {
         width: 364px;
+    }
+}
+
+@media (max-width: 380px) {
+    .connection_block {
+        margin-top: 100px;
     }
 }
 
