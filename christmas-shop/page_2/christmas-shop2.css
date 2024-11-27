@@ -29,7 +29,7 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    width: 1440px;
+    max-width: 1440px;
     height: 64px;
 }
 
@@ -39,6 +39,12 @@ header {
     align-items: center;
     width: 1276px;
     height: 64px;
+}
+
+@media (max-width: 768px) {
+    .header_container {
+        margin: 0 7px;
+    }
 }
 
 .label_box {
@@ -56,6 +62,10 @@ header {
     justify-content: space-between;
     width: 101px;
     height: 32px;
+}
+
+.label_box_2:hover {
+    cursor: pointer;
 }
 
 .label_text {
@@ -79,6 +89,12 @@ header {
     height: 40px;
 }
 
+@media (max-width: 768px) {
+    .menu_box {
+        display: none;
+    }
+}
+
 .menu_item_1 {
     display: flex;
     justify-content: center;
@@ -88,6 +104,7 @@ header {
 
     background-color: #FF46461A;
     border-radius: 12px;
+    cursor: default;
 }
 
 .part_gifts {
@@ -125,9 +142,47 @@ header {
 
     width: 88px;
     height: 40px;
-
     background-color: #FF46461A;
     border-radius: 12px;
+}
+
+.burger_container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .burger_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger_container:hover  {
+        cursor: pointer;
+        background-image: url(../assets/svg/burger_icon/X.svg);
+        transition: 1s;
+    }
+
+    .burger_container:hover .burger_icon {
+        display: none;
+        transition: 1s;  
+    }
+}
+
+.burger_icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .burger_icon {
+        display: flex;
+        width: 20px;
+        height: 8px;
+        border-top: 1px solid #181C29;
+        border-bottom: 1px solid #181C29;
+    }
 }
 
 .part_about {
@@ -139,7 +194,9 @@ header {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #181C29; 
+    color: #181C29;
+
+    transition: 0.3s;
 }
 
 .menu_item_3 {
@@ -148,6 +205,8 @@ header {
     align-items: center;
     width: 74px;
     height: 40px;
+
+    transition: 0.3s;
 }
 
 .menu_item_3:hover span {
@@ -161,7 +220,6 @@ header {
 
     width: 74px;
     height: 40px;
-
     background-color: #FF46461A;
     border-radius: 12px;
 }
@@ -176,6 +234,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29; 
+
+    transition: 0.3s;
 }
 
 .menu_item_4 {
@@ -184,6 +244,8 @@ header {
     align-items: center;
     width: 112px;
     height: 40px;
+
+    transition: 0.3s;
 }
 
 .menu_item_4:hover span {
@@ -197,7 +259,6 @@ header {
 
     width: 112px;
     height: 40px;
-
     background-color: #FF46461A;
     border-radius: 12px;
 }
@@ -212,6 +273,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29; 
+
+    transition: 0.3s;
 }
 
 .main_bg {
@@ -219,8 +282,7 @@ header {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
-    height: 1394px;
+    width: 100%;
 
     background-color: #FF4646;
     border-radius: 20px;
@@ -230,12 +292,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1440px;
+    width: 100%;
     height: 200px;
 
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
     
     background-image: url(../assets/page_2/garland.png);
 }
@@ -264,7 +325,7 @@ header {
     width: 474px;
     height: 40px;
 
-    margin: 20px 0 0 0;
+    margin: 25px 0 0 0;
 }
 
 .options_block_1 {
@@ -361,13 +422,13 @@ header {
 
 .gifts {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
 
-    width: 1276px;
-    height: 1050px;
+    width: 90%;
 
-    margin-top: 20px;
+    margin: 15px 0 65px;
 }
 
 .gift_card {
@@ -476,20 +537,40 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    width: 1440px;
-    height: 496px;
+    max-width: 1440px;
 
+    margin-bottom: 60px;
 }
 
 .connection_block {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    width: 1276px;
-    height: 204px;
+    gap: 12px;
+    width: 100%;
 
     margin-top: 60px;
 }
+
+@media (max-width: 1418px) {
+    .connection_block {
+        width: 752px;
+    }
+}
+
+@media (max-width: 767px) {
+    .connection_block {
+        width: 364px;
+    }
+}
+
+@media (max-width: 380px) {
+    .connection_block {
+        margin-top: 100px;
+    }
+}
+
 
 .contact_container {
     display: flex;
@@ -501,6 +582,22 @@ footer {
 
     border-radius: 20px;
     background-color: #ECF3F8;
+}
+
+@media (max-width: 1418px) {
+    .contact_container {
+        width: 752px;
+        height: 204px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .contact_container {
+        width: 364px;
+        height: 204px;
+
+    }
 }
 
 .contact_container:hover {

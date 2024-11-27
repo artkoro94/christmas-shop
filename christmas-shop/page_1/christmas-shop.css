@@ -181,8 +181,7 @@ header {
 
     .burger_container:hover .burger_icon {
         display: none;
-        transition: 1s;
-        
+        transition: 1s;  
     }
 }
 
