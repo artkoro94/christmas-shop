@@ -335,7 +335,7 @@ header {
 
 @media (max-width: 500px) {
     .options_container {
-        width: 95%;
+        width: 93%;
     }
 }
 
@@ -349,6 +349,12 @@ header {
 
     background-color: #FFFFFF33;
     border-radius: 12px;
+}
+
+@media (max-width: 500px) {
+    .options_block_1 {
+        width: 15%;
+    }
 }
 
 .options_word {
