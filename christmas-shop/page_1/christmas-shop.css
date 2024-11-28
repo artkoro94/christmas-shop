@@ -27,6 +27,12 @@ body {
     max-width: 1440px;
 }
 
+@media (max-width: 425px) {
+    body {
+
+    }
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -415,6 +421,12 @@ header {
     color: #181C29;
 }
 
+@media (max-width: 768px) {
+    .main_button:hover {
+        pointer-events: none;
+    }
+}
+
 .main_button_text {
     font-family: Montserrat;
     font-size: 12px;
@@ -773,6 +785,12 @@ header {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .button_right:hover {
+        pointer-events: none;
+    }
+}
+
 .arrow_right {
     width: 14px;
     height: 12px;
@@ -886,6 +904,12 @@ header {
     cursor: pointer;
     color: #FF4646;
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .gift_card:hover {
+        pointer-events: none;
+    }
 }
 
 .gift_text_block {
@@ -1067,6 +1091,12 @@ header {
 .CTA_button:hover span  {
     transition: 0.3s;
     color: #181C29;
+}
+
+@media (max-width: 768px) {
+    .CTA_button:hover {
+        pointer-events: none;
+    }
 }
 
 .CTA_button_text {
@@ -1319,6 +1349,12 @@ footer {
     transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+    .contact_container:hover {
+        pointer-events: none;
+    }
+}
+
 .footer_pic {
     width: 80px;
     height: 80px;
@@ -1394,6 +1430,12 @@ footer {
 .media_block:hover {
     cursor: pointer;
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .media_block:hover {
+        pointer-events: none;
+    }
 }
 
 .media_block:hover .media_img_1 {
@@ -1483,4 +1525,10 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     color: #FF4646;
+}
+
+@media (max-width: 768px) {
+    .footer_rss:hover {
+        pointer-events: none;
+    }
 }
