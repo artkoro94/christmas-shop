@@ -21,6 +21,11 @@ a {
     cursor: pointer;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 body {
     margin: auto;
     max-width: 1440px;
@@ -102,9 +107,25 @@ header {
     width: 78px;
     height: 40px;
 
+    transition: 0.3s;
+
+    background-color: #FF46461A;
+    border-radius: 12px;;
+}
+
+.menu_item_1:hover span {
+    color: #FF4646;
+    transition: 0.3s;
+}
+
+.menu_item_1:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: 78px;
+    height: 40px;
     background-color: #FF46461A;
     border-radius: 12px;
-    cursor: default;
 }
 
 .part_gifts {
@@ -146,32 +167,110 @@ header {
     border-radius: 12px;
 }
 
-.burger_container {
+label {
     display: none;
 }
 
+#burger_toggle {
+    display: none;
+}
+
+#burger_toggle:checked ~ label::after {
+    transform: rotate(45deg) translate(-5px, -4.5px);
+    bottom: 6.8px;
+    display: flex;
+}
+
+#burger_toggle:checked ~ label::before {
+    transform: rotate(-45deg) translate(-5px, 4.5px);
+    top: 6.8px;
+}
+
 @media (max-width: 768px) {
-    .burger_container {
+    label {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         width: 40px;
         height: 40px;
+        cursor: pointer;
     }
 }
 
-.burger_line {
+label::after, label::before {
+    display: flex;
+    width: 20px;
+    height: 1px;
+    background-color: #181C29;
+    transition: 0.3s;
+}
+
+label::before {
+    content: "";
+    top: 0;
+}
+
+label::after {
+    content: "";
+    bottom: 0;
+}
+
+.burger_menu {
     display: none;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
-    .burger_line {
-        display: flex;
-        width: 20px;
-        height: 1px;
-        background-color: #181C29;
+.burger_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    width: 100%;
+    height: 960px;
+
+    margin-top: 64px;
+    background-color: #FFFFFF;
+
+    left: 768px;
+    top: 0px;
+
+    transition: 0.3s;
     }
+
+    .burger_options {
+        display: flex;
+        justify-content: center;
+
+        width: 202px;
+        height: 240px;
+    }
+
+    .burger_li {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36.48px;
+        letter-spacing: 0.16em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+    }
+}
+
+#burger_toggle:checked ~ .burger_menu {
+    left: 0px;
+    transition: 0.3s;
 }
 
 .part_about {
