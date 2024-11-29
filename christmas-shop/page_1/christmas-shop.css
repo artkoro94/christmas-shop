@@ -216,6 +216,7 @@ label::after {
 
 .burger_menu {
     display: none;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -224,9 +225,9 @@ label::after {
     justify-content: center;
     align-items: center;
 
-    position: absolute;
+    position: fixed;
 
-    width: 768px;
+    width: 100%;
     height: 960px;
 
     margin-top: 64px;
@@ -234,6 +235,8 @@ label::after {
 
     left: 768px;
     top: 0px;
+
+    transition: 0.3s;
     }
 
     .burger_options {
