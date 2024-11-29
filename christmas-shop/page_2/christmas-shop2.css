@@ -153,35 +153,24 @@ header {
 @media (max-width: 768px) {
     .burger_container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         width: 40px;
         height: 40px;
     }
-
-    .burger_container:hover  {
-        cursor: pointer;
-        background-image: url(../assets/svg/burger_icon/X.svg);
-        transition: 1s;
-    }
-
-    .burger_container:hover .burger_icon {
-        display: none;
-        transition: 1s;  
-    }
 }
 
-.burger_icon {
+.burger_line {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .burger_icon {
+    .burger_line {
         display: flex;
         width: 20px;
-        height: 8px;
-        border-top: 1px solid #181C29;
-        border-bottom: 1px solid #181C29;
+        height: 1px;
+        background-color: #181C29;
     }
 }
 
