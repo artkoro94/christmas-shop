@@ -32,6 +32,10 @@ body {
     max-width: 1440px;
 }
 
+.body_overflow {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -216,7 +220,6 @@ label::after {
 
 .burger_menu {
     display: none;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -270,7 +273,6 @@ label::after {
     left: 0px;
     transition: 0.3s;
 }
-
 
 .part_about {
     font-family: Montserrat;
