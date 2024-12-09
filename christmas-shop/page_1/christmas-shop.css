@@ -231,7 +231,7 @@ label::after {
     position: fixed;
 
     width: 100%;
-    height: 960px;
+    height: 100%;
 
     margin-top: 64px;
     background-color: #FFFFFF;
@@ -240,6 +240,8 @@ label::after {
     top: 0px;
 
     transition: 0.3s;
+
+    z-index: 1;
     }
 
     .burger_options {
@@ -759,6 +761,9 @@ label::after {
     
     gap: 23px;
     padding-left: 6%;
+    position: relative;
+    left: 0;
+    transition: 0.3s;
 }
 
 @media (max-width: 768px) {
@@ -1206,11 +1211,23 @@ label::after {
 
 .CTA_timer_container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     width: 320px;
     height: 52px;
 
     padding: 8px 12px 12px 12px;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
 }
 
 .timer_block {
