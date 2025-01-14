@@ -25,6 +25,7 @@ ul {
 a {
     text-decoration: none;
     cursor: pointer;
+    color: #181C29;
 }
 
 body {
@@ -34,6 +35,10 @@ body {
 
 .body_overflow {
     overflow: hidden;
+}
+
+.body_overflow_visible {
+    overflow: visible;
 }
 
 header {
@@ -57,13 +62,13 @@ header {
     }
 }
 
+
 .label_box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 141px;
     height: 40px;
-
 }
 
 .label_box_2 {
@@ -244,6 +249,10 @@ label::after {
     z-index: 1;
     }
 
+    .burger_hidden {
+       opacity: 0;
+    }
+
     .burger_options {
         display: flex;
         justify-content: center;
@@ -269,11 +278,11 @@ label::after {
         justify-content: space-between;
         align-items: center; 
     }
-}
 
-#burger_toggle:checked ~ .burger_menu {
-    left: 0px;
-    transition: 0.3s;
+    #burger_toggle:checked ~ .burger_menu {
+        left: 0px;
+        transition: 0.3s;
+    }
 }
 
 .part_about {
@@ -763,7 +772,7 @@ label::after {
     padding-left: 6%;
     position: relative;
     left: 0;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -791,6 +800,8 @@ label::after {
     width: 200px;
     height: 200px;
     border-radius: 20px;
+
+    flex-shrink: 0;
 }
 
 .slider_block {
@@ -823,7 +834,7 @@ label::after {
     width: 56px;
     height: 56px;
 
-    border: 1px solid #FFFFFF66;
+    border: 1px solid #FFFFFF;
     border-radius: 20px;
     background-color: transparent;
 
@@ -854,7 +865,6 @@ label::after {
 }
 
 .button_right:hover {
-    background-color: #FFFFFF;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -877,6 +887,56 @@ label::after {
     background-image: url(../assets/svg/arrow_right_red.svg);
     
     transition: 0.3s;
+}
+
+.button_left:hover .arrow_left {
+    background-image: url(../assets/svg/arrow_left_red.svg);
+    
+    transition: 0.3s;
+}
+
+.button_left,
+.button_right {
+    transition: background-color 0.3s ease, opacity 0.3s ease, cursor 0.3s ease;
+}
+
+.button_right_disabled {
+    opacity: 0.5;
+}
+
+.button_left_enabled {
+    opacity: 0.5;
+}
+
+.hover_left_disabled:hover,
+.hover_right_disabled:hover {
+    background-color: transparent;
+    cursor: none;
+}
+
+.button_active {
+    cursor: default;
+    background-color: transparent;
+}
+
+.button_disabled {
+    pointer-events: none; /* Убираем hover и клики */
+    cursor: default; /* Указатель мыши — обычный */
+}
+
+
+/* Активные кнопки */
+.button_left:hover:not(.button_disabled),
+.button_right:hover:not(.button_disabled) {
+    background-color: white; /* Замените на нужный цвет */
+    cursor: pointer;
+}
+
+/* Для hover эффекта (если он отключается для disabled кнопок) */
+.button_left:hover.button_disabled,
+.button_right:hover.button_disabled {
+    background-color: none; /* Цвет для отключённой кнопки */
+    cursor: default;
 }
 
 .best_gifts {

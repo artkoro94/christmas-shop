@@ -1,3 +1,7 @@
+/* Burger */
+
+// появление бургер-блока
+
 const body = document.querySelector('.body');
 const burger = document.querySelector('#burger_toggle');
 
@@ -6,30 +10,114 @@ burger.addEventListener('click', (event) => {
 }
 )
 
-// Carousel
+// сокрытие бургер-блока при нажатии на якорь
 
-let offset = 0;
+const menuIcon = document.querySelector('.burger_menu');
+const burgerMenu = document.querySelector('ul');
+const burgerOverflowVisible = document.querySelector('.body_overflow_visible');
+const b = document.querySelector('label');
+
+burgerMenu.addEventListener('click', (event) => {
+    menuIcon.classList.toggle('burger_hidden');
+    body.classList.toggle('body_overflow_visible');
+    body.classList.removeEventListener('b');
+}
+)
+
+/* Carousel */
+
 const sliderLine = document.querySelector('.carousel');
+const leftButton = document.getElementById('left-button');
+const rightButton = document.getElementById('right-button');
+let offset = 0; // Текущее смещение
+let moveDistance = 0; // Движение за один клик
+let maxOffset = 0; // Максимальное смещение
+let paddingStart = 0; // Начальный отступ карусел
 
-document.querySelector('.button_right').addEventListener('click', function(){
-    offset = offset - 182;
-    if (offset <= -728) {
-        offset = -728;
+// Функция для расчёта параметров
+
+function calculateSliderParams() {
+    const visibleWidth = sliderLine.parentElement.offsetWidth; // Видимая ширина
+    const totalWidth = sliderLine.scrollWidth; // Полная ширина слайдера
+    const numClicks = window.innerWidth >= 769 ? 3 : 6; // Количество кликов для полного скролла
+
+    const style = window.getComputedStyle(sliderLine); // Получаем стили карусели
+    paddingStart = parseInt(style.paddingLeft) || 0; // Отступ в начале (padding-left)
+
+    moveDistance = Math.ceil((totalWidth - visibleWidth + paddingStart) / numClicks); // Шаг движения
+    maxOffset = -(totalWidth - visibleWidth + paddingStart); // Максимально допустимое смещение
+
+    if (moveDistance < 1) moveDistance = visibleWidth;
+}
+
+// Функция для обновления кнопок
+
+function updateButtons() {
+
+    // Правая кнопка
+
+    if (offset <= maxOffset) {
+        rightButton.disabled = true;
+        rightButton.classList.add('button_right_disabled');
+        rightButton.classList.add('button_disabled');
+    } else {
+        rightButton.disabled = false;
+        rightButton.classList.remove('button_right_disabled');
+        rightButton.classList.remove('button_disabled');
     }
-    sliderLine.style.left = offset + 'px';
+
+    // Левая кнопка
+
+    if (offset >= -1) {
+        leftButton.disabled = true;
+        leftButton.classList.add('button_left_enabled');
+        leftButton.classList.add('button_disabled');
+    } else {
+        leftButton.disabled = false;
+        leftButton.classList.remove('button_left_enabled');
+        leftButton.classList.remove('button_disabled');
+    }
+}
+
+// Обработчик для кнопки "Вправо"
+
+rightButton.addEventListener('click', () => {
+    if (offset > maxOffset) { // Проверяем, можно ли двигаться дальше
+        offset -= moveDistance; // Сдвигаем вправо
+        if (offset < maxOffset) offset = maxOffset; // Ограничиваем крайнюю точку
+        sliderLine.style.transform = `translateX(${offset}px)`; // Применяем смещение
+    }
+    updateButtons();
 });
 
-document.querySelector('.button_left').addEventListener('click', function(){
-    offset = offset + 182;
-    if (offset > 0) {
-        offset = 0;
+// Обработчик для кнопки "Влево"
+
+leftButton.addEventListener('click', () => {
+    if (offset < 0) { // Проверяем, можно ли двигаться влево
+        offset += moveDistance; // Сдвигаем влево
+        if (offset > 0) offset = 0; // Ограничиваем начальную точку
+        sliderLine.style.transform = `translateX(${offset}px)`; // Применяем смещение
     }
-    sliderLine.style.left = offset + 'px';
+    updateButtons();
 });
 
-// Timer
+// Функция инициализации
 
-let date = new Date('Jan 01 2025 00:00:00');
+function initializeSlider() {
+    calculateSliderParams(); // Рассчитываем параметры
+    offset = 0;
+    updateButtons(); // Устанавливаем состояние кнопок
+    sliderLine.style.transform = `translateX(${offset}px)`; // Обнуляем позицию слайдера
+}
+
+// Обновляем слайдер при загрузке страницы и изменении размеров окна
+
+window.addEventListener('load', initializeSlider);
+window.addEventListener('resize', initializeSlider);
+
+/* Timer */
+
+let date = new Date('Jan 01 2026 00:00:00');
 
 function counts(){
     let now = new Date();
