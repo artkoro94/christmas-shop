@@ -772,7 +772,7 @@ label::after {
     padding-left: 6%;
     position: relative;
     left: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -815,7 +815,7 @@ label::after {
 
 @media (max-width: 768px) {
     .slider_block {
-        width: 99%;
+        width: 95%;
   }
 }
 
@@ -867,12 +867,6 @@ label::after {
 .button_right:hover {
     transition: 0.3s;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .button_right:hover {
-        pointer-events: none;
-    }
 }
 
 .arrow_right {

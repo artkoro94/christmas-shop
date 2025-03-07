@@ -20,9 +20,19 @@ const b = document.querySelector('label');
 burgerMenu.addEventListener('click', (event) => {
     menuIcon.classList.toggle('burger_hidden');
     body.classList.toggle('body_overflow_visible');
-    body.classList.removeEventListener('b');
+    burger.checked = false;
 }
 )
+
+burger.addEventListener('change', () => {
+    if (burger.checked) {
+        menuIcon.classList.remove('burger_hidden'); // Показываем бургер
+        body.classList.add('body_overflow');
+    } else {
+        menuIcon.classList.add('burger_hidden'); // Прячем бургер
+        body.classList.remove('body_overflow');
+    }
+});
 
 /* Carousel */
 
@@ -32,7 +42,7 @@ const rightButton = document.getElementById('right-button');
 let offset = 0; // Текущее смещение
 let moveDistance = 0; // Движение за один клик
 let maxOffset = 0; // Максимальное смещение
-let paddingStart = 0; // Начальный отступ карусел
+let paddingStart = 0; // Начальный отступ карусели
 
 // Функция для расчёта параметров
 
