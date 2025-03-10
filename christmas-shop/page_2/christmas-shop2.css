@@ -485,12 +485,6 @@ label::after {
     border-radius: 12px;
 }
 
-@media (max-width: 768px) {
-    .options_block_2:hover {
-        pointer-events: none;
-    }
-}
-
 .options_block_3 {
     display: flex;
     justify-content: center;
@@ -513,13 +507,6 @@ label::after {
     border-radius: 12px;
 }
 
-@media (max-width: 768px) {
-    .options_block_3:hover {
-        pointer-events: none;
-    }
-}
-
-
 .options_block_4 {
     display: flex;
     justify-content: center;
@@ -541,13 +528,6 @@ label::after {
     background-color: #FFFFFF33;
     border-radius: 12px;
 }
-
-@media (max-width: 768px) {
-    .options_block_4:hover {
-        pointer-events: none;
-    }
-}
-
 
 .gifts {
     display: flex;
@@ -574,12 +554,6 @@ label::after {
 .gift_card:hover p {
     color: #FF4646;
     transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .gift_card:hover {
-        pointer-events: none;
-    }
 }
 
 .gift_text_block {
@@ -737,12 +711,6 @@ footer {
     transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .contact_container:hover {
-        pointer-events: none;
-    }
-}
-
 .footer_pic {
     width: 80px;
     height: 80px;
@@ -826,12 +794,6 @@ footer {
     background-image: url(../assets/footer/tg_red.svg);
 }
 
-@media (max-width: 768px) {
-    .media_block:hover {
-        pointer-events: none;
-    }
-}
-
 .media_img_2 {
     background-repeat: no-repeat;
     background-position: center;
@@ -913,10 +875,4 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     color: #FF4646;
-}
-
-@media (max-width: 768px) {
-    .footer_rss:hover {
-        pointer-events: none;
-    }
 }

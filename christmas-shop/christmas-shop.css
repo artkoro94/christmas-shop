@@ -1,13 +1,13 @@
 @font-face {
     font-family: Montserrat;
-    src: url(../fonts/Montserrat-Regular.ttf);
+    src: url(fonts/Montserrat-Regular.ttf);
     font-style: normal; 
     font-weight: normal;
 }
 
 @font-face {
     font-family: Allura;
-    src: url(../fonts/Allura-Regular.ttf);
+    src: url(fonts/Allura-Regular.ttf);
     font-style: normal; 
     font-weight: normal;
 }
@@ -392,7 +392,7 @@ label::after {
 }
 
 .bg_1 {
-    background-image: url(../assets/background/snow_bg.png);
+    background-image: url(assets/background/snow_bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -408,7 +408,7 @@ label::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../assets/background/ball_bg.png);
+    background-image: url(assets/background/ball_bg.png);
     max-width: 1440px;
     height: 524px;
     background-size: cover;
@@ -501,11 +501,7 @@ label::after {
     color: #181C29;
 }
 
-@media (max-width: 768px) {
-    .main_button:hover {
-        pointer-events: none;
-    }
-}
+
 
 .main_button_text {
     font-family: Montserrat;
@@ -556,7 +552,7 @@ label::after {
 
     width: 100%;
     height: 648px;
-    background-image: url(../assets/background/about_bg.png);
+    background-image: url(assets/background/about_bg.png);
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
@@ -715,7 +711,7 @@ label::after {
     width: 100%;
     height: 488px;
 
-    background-image: url(../assets/background/slider_bg.png);
+    background-image: url(assets/background/slider_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -844,7 +840,7 @@ label::after {
 .arrow_left {
     width: 12.5px;
     height: 12px;
-    background-image: url(../assets/svg/arrow_left.svg);
+    background-image: url(assets/svg/arrow_left.svg);
 }
 
 .button_right {
@@ -872,19 +868,19 @@ label::after {
 .arrow_right {
     width: 14px;
     height: 12px;
-    background-image: url(../assets/svg/arrow_right.svg);
+    background-image: url(assets/svg/arrow_right.svg);
 
     transition: 0.3s;
 }
 
 .button_right:hover .arrow_right {
-    background-image: url(../assets/svg/arrow_right_red.svg);
+    background-image: url(assets/svg/arrow_right_red.svg);
     
     transition: 0.3s;
 }
 
 .button_left:hover .arrow_left {
-    background-image: url(../assets/svg/arrow_left_red.svg);
+    background-image: url(assets/svg/arrow_left_red.svg);
     
     transition: 0.3s;
 }
@@ -946,7 +942,7 @@ label::after {
 
     width: 100%;
     
-    background-image: url(../assets/background/best_gifts_bg.png);
+    background-image: url(assets/background/best_gifts_bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1032,12 +1028,6 @@ label::after {
     cursor: pointer;
     color: #FF4646;
     transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .gift_card:hover {
-        pointer-events: none;
-    }
 }
 
 .gift_text_block {
@@ -1142,7 +1132,7 @@ label::after {
     width: 100%;
     height: 668px;
     
-    background-image: url(../assets/background/CTA_bg.png);
+    background-image: url(assets/background/CTA_bg.png);
     background-size: 111%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1157,7 +1147,7 @@ label::after {
     height: 668px;
 
 
-    background-image: url(../assets/background/bg_CTA_2.png);
+    background-image: url(assets/background/bg_CTA_2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -1219,12 +1209,6 @@ label::after {
 .CTA_button:hover span  {
     transition: 0.3s;
     color: #181C29;
-}
-
-@media (max-width: 768px) {
-    .CTA_button:hover {
-        pointer-events: none;
-    }
 }
 
 .CTA_button_text {
@@ -1489,12 +1473,6 @@ footer {
     transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .contact_container:hover {
-        pointer-events: none;
-    }
-}
-
 .footer_pic {
     width: 80px;
     height: 80px;
@@ -1560,7 +1538,7 @@ footer {
 .media_img_1 {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/footer/tg.svg);
+    background-image: url(assets/footer/tg.svg);
     width: 24px;
     height: 24px;
 
@@ -1572,22 +1550,16 @@ footer {
     transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .media_block:hover {
-        pointer-events: none;
-    }
-}
-
 .media_block:hover .media_img_1 {
     cursor: pointer;
     transition: 0.3s;
-    background-image: url(../assets/footer/tg_red.svg);
+    background-image: url(assets/footer/tg_red.svg);
 }
 
 .media_img_2 {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/footer/facebook.svg);
+    background-image: url(assets/footer/facebook.svg);
     width: 24px;
     height: 24px;
 
@@ -1597,13 +1569,13 @@ footer {
 .media_block:hover .media_img_2 {
     cursor: pointer;
     transition: 0.3s;
-    background-image: url(../assets/footer/facebook_red.svg);
+    background-image: url(assets/footer/facebook_red.svg);
 }
 
 .media_img_3 {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/footer/instagram.svg);
+    background-image: url(assets/footer/instagram.svg);
     width: 24px;
     height: 24px;
 
@@ -1613,13 +1585,13 @@ footer {
 .media_block:hover .media_img_3 {
     cursor: pointer;
     transition: 0.3s;
-    background-image: url(../assets/footer/instagram_red.svg);
+    background-image: url(assets/footer/instagram_red.svg);
 }
 
 .media_img_4 {
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/footer/X.svg);
+    background-image: url(assets/footer/X.svg);
     width: 24px;
     height: 24px;
 
@@ -1629,7 +1601,7 @@ footer {
 .media_block:hover .media_img_4 {
     cursor: pointer;
     transition: 0.3s;
-    background-image: url(../assets/footer/X_red.svg);
+    background-image: url(assets/footer/X_red.svg);
 }
 
 .footer_2025 {
@@ -1665,10 +1637,4 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     color: #FF4646;
-}
-
-@media (max-width: 768px) {
-    .footer_rss:hover {
-        pointer-events: none;
-    }
 }
