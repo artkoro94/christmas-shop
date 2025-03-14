@@ -19,6 +19,7 @@
 a {
     text-decoration: none;
     cursor: pointer;
+    color: #181C29;
 }
 
 ul {
@@ -29,6 +30,10 @@ ul {
 body {
     margin: auto;
     max-width: 1440px;
+}
+
+.body_overflow_visible {
+    overflow: visible;
 }
 
 .body_overflow {
@@ -48,11 +53,12 @@ header {
     align-items: center;
     width: 1276px;
     height: 64px;
+    margin: 0px 20px;
 }
 
 @media (max-width: 768px) {
     .header_container {
-        margin: 0 7px;
+        margin: 0 20px;
     }
 }
 
@@ -225,6 +231,10 @@ label::after {
     overflow: hidden;
 }
 
+.burger_hidden {
+    opacity: 0;
+ }
+ 
 @media (max-width: 768px) {
 .burger_menu {
     display: flex;

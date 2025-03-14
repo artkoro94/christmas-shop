@@ -54,11 +54,12 @@ header {
     align-items: center;
     width: 1276px;
     height: 64px;
+    margin: 0px 20px;
 }
 
 @media (max-width: 768px) {
     .header_container {
-        margin: 0 7px;
+        margin: 0 20px;
     }
 }
 
@@ -910,7 +911,7 @@ label::after {
 }
 
 .button_disabled {
-    pointer-events: none; /* Убираем hover и клики */
+    /* Убираем hover и клики */
     cursor: default; /* Указатель мыши — обычный */
 }
 
@@ -925,9 +926,11 @@ label::after {
 /* Для hover эффекта (если он отключается для disabled кнопок) */
 .button_left:hover.button_disabled,
 .button_right:hover.button_disabled {
-    background-color: none; /* Цвет для отключённой кнопки */
-    cursor: default;
+    background-color: white; /* Цвет для отключённой кнопки */
+    cursor: pointer;
 }
+
+
 
 .best_gifts {
     max-width: 1440px;
