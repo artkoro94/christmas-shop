@@ -46,3 +46,37 @@
             burger.dispatchEvent(new Event('change')); // Принудительно вызываем событие "change"
         });
     });
+
+
+/* Modal */
+
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const openCards = document.querySelectorAll(".openModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    // Открытие модалки
+
+        openCards.forEach((card) => {
+        card.addEventListener("click", () => {
+            modalTitle.textContent = card.getAttribute("data-title");
+            modalText.textContent = card.getAttribute("data-text");
+
+            modal.style.display = "flex";
+        });
+        });
+
+    // Закрытие по крестику
+
+        closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        });
+
+    // Закрытие по клику на затемнение
+
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });

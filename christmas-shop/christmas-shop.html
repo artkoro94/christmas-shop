@@ -12,7 +12,6 @@
 <body class="body">
 
     <header>
-
             <div class="header_container">
                 <a href="christmas-shop.html">
                 <div class="label_box">
@@ -110,7 +109,7 @@
 
                 <div class="gift_cards_container">
 
-                    <div class="gift_card">
+                    <div class="gift_card openModal" data-title="FOR WORK" data-text="CONSOLE.LOG GURU">
                         <img src="assets/gift_cards/card_1.png" alt="card_1" width="310" height="230">
                         <div class="gift_text_block">
                             <div class="gift_title_1">FOR WORK</div>
@@ -118,7 +117,7 @@
                         </div>
                     </div>
 
-                    <div class="gift_card">
+                    <div class="gift_card openModal" data-title="FOR HEALTH" data-text="HYDRATION BOT">
                         <img src="assets/gift_cards/card_2.png" alt="card_2" width="310" height="230">
                         <div class="gift_text_block">
                             <div class="gift_title_2">FOR HEALTH</div>
@@ -126,7 +125,7 @@
                         </div>
                     </div>
 
-                    <div class="gift_card">
+                    <div class="gift_card openModal" data-title="FOR WORK" data-text="MERGE MASTER">
                         <img src="assets/gift_cards/card_3.png" alt="card_3" width="310" height="230">
                         <div class="gift_text_block">
                             <div class="gift_title_3">FOR WORK</div>
@@ -134,11 +133,19 @@
                         </div>
                     </div>
 
-                    <div class="gift_card">
+                    <div class="gift_card openModal" data-title="FOR HARMONY" data-text="SPONTANEOUS CODING PHILOSOPHER">
                         <img src="assets/gift_cards/card_4.png" alt="card_4" width="310" height="230">
                         <div class="gift_text_block">
                             <div class="gift_title_4">FOR HARMONY</div>
                             <p class="gift_text">SPONTANEOUS CODING PHILOSOPHER</p>
+                        </div>
+                    </div>
+
+                    <div id="modal" class="modal">
+                        <div class="modal_content">
+                            <span id="closeModal" class="close">&times;</span>
+                            <h3 id="modalTitle"></h3>
+                            <p id="modalText"></p>
                         </div>
                     </div>
 
