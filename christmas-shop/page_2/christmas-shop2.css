@@ -441,6 +441,10 @@ label::after {
     }
 }
 
+.options_block.active {
+    background-color: #FFFFFF33;
+}
+
 .options_block_1 {
     display: flex;
     justify-content: center;
@@ -448,15 +452,23 @@ label::after {
 
     width: 65px;
     height: 40px;
-
-    background-color: #FFFFFF33;
     border-radius: 12px;
+
+    transition: 0.3s;
 }
 
 @media (max-width: 500px) {
     .options_block_1 {
         width: 15%;
     }
+}
+
+.options_block:hover {
+    cursor: pointer;
+    transition: 0.3s;
+
+    background-color: #FFFFFF33;
+    border-radius: 12px;
 }
 
 .options_word {
@@ -481,18 +493,9 @@ label::after {
     width: 116px;
     height: 40px;
 
-    transition: 0.3s;
-}
-
-.options_block_2:hover {
-    cursor: pointer;
-    transition: 0.3s;
-
-    width: 116px;
-    height: 40px;
-
-    background-color: #FFFFFF33;
     border-radius: 12px;
+
+    transition: 0.3s;
 }
 
 .options_block_3 {
@@ -503,18 +506,9 @@ label::after {
     width: 126px;
     height: 40px;
 
-    transition: 0.3s;
-}
-
-.options_block_3:hover {
-    cursor: pointer;
-    transition: 0.3s;
-
-    width: 126px;
-    height: 40px;
-
-    background-color: #FFFFFF33;
     border-radius: 12px;
+
+    transition: 0.3s;
 }
 
 .options_block_4 {
@@ -525,18 +519,9 @@ label::after {
     width: 143px;
     height: 40px;
 
-    transition: 0.3s;
-}
-
-.options_block_4:hover {
-    cursor: pointer;
-    transition: 0.3s;
-
-    width: 143px;
-    height: 40px;
-
-    background-color: #FFFFFF33;
     border-radius: 12px;
+
+    transition: 0.3s;
 }
 
 .gifts {
@@ -664,13 +649,42 @@ label::after {
   }
   
   .modal_content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    width: 400px;
+    height: 514px;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
   }
+
+  #modalTitle {
+    color: rgb(94, 208, 253);
+    font-family: Montserrat;
+    margin: 0;
+  }
+
+  #modalText {
+    margin: 20px 0 20px 0;
+    font-family: Montserrat;
+    font-size: large;
+  }
+  
+  #modalExtraText {
+    width: 350px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(94, 208, 253);
+    box-shadow: 5px 5px 10px #06A44F;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-style: italic;
+    padding: 10px;
+    margin: 15px;
+}
   
   .close {
     position: absolute;

@@ -56,27 +56,48 @@
     const openCards = document.querySelectorAll(".openModal");
     const closeBtn = document.getElementById("closeModal");
 
-    // Открытие модалки
+    // Открытие модалки с динамическими данными
 
-        openCards.forEach((card) => {
-        card.addEventListener("click", () => {
-            modalTitle.textContent = card.getAttribute("data-title");
-            modalText.textContent = card.getAttribute("data-text");
-
-            modal.style.display = "flex";
+        document.querySelectorAll(".gift_card").forEach(card => {
+            card.onclick = function() {
+            const title = card.getAttribute("data-title");
+            const text = card.getAttribute("data-text");
+            const imgSrc = card.getAttribute("data-img");
+            const newText = card.getAttribute("data-new-text");
+        
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalText").textContent = text;
+            document.getElementById("modalExtraText").textContent = newText;
+            document.getElementById("modalImg").src = imgSrc;
+        
+            document.getElementById("modal").style.display = "flex";
+            };
         });
+        
+    // Закрытие модалки
+
+        document.querySelector(".close").onclick = function() {
+            document.getElementById("modal").style.display = "none";
+        };
+    
+    // Закрытие при клике вне окна
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+            }
+        };
+
+
+
+/* 2 page options */
+
+    const optionBlocks = document.querySelectorAll('.options_block');
+
+    optionBlocks.forEach(block => {
+        block.addEventListener('click', () => {
+            optionBlocks.forEach(item => item.classList.remove('active'));
+
+            block.classList.add('active');
         });
-
-    // Закрытие по крестику
-
-        closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-        });
-
-    // Закрытие по клику на затемнение
-
-        window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-        });
+    });

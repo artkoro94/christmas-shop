@@ -1129,19 +1129,47 @@ label::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    background: rgba(0, 0, 0, 0.7); /* Затемнение фона */
     justify-content: center;
     align-items: center;
   }
   
   .modal_content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    width: 400px;
+    height: 514px;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
   }
+
+  #modalTitle {
+    color: rgb(94, 208, 253);
+    font-family: Montserrat;
+  }
+
+  #modalText {
+    margin: 20px 0 20px 0;
+    font-family: Montserrat;
+    font-size: large;
+  }
+
+  #modalExtraText {
+    width: 350px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: rgb(94, 208, 253);
+    box-shadow: 5px 5px 10px #06A44F;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-style: italic;
+    padding: 10px;
+    margin: 15px;
+}
   
   .close {
     position: absolute;
