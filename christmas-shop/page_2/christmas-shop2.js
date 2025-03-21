@@ -101,3 +101,26 @@
             block.classList.add('active');
         });
     });
+
+    // option pick
+
+        document.querySelectorAll('.options_block').forEach(option => {
+            option.addEventListener('click', () => {
+            const selectedCategory = option.querySelector('.options_word').textContent;
+        
+            document.querySelectorAll('.options_block').forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        
+            document.querySelectorAll('.gift_card').forEach(card => {
+                const cardCategory = card.dataset.title;
+                if (selectedCategory === 'ALL' || cardCategory === selectedCategory) {
+                card.style.opacity = '1';
+                card.style.filter = 'brightness(1)';
+                } else {
+                card.style.opacity = '0.4';
+                card.style.filter = 'brightness(0.5)';
+                }
+            });
+            });
+        });
+      

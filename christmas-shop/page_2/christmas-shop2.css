@@ -253,6 +253,8 @@ label::after {
     top: 0px;
 
     transition: 0.3s;
+
+    z-index: 1;
     }
 
     .burger_options {
