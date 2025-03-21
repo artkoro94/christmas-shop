@@ -489,6 +489,7 @@ label::after {
 
 @media (max-width: 500px) {
     .options_word {
+        font-size: 10px;
         letter-spacing: 0.015em;
     }
 }
