@@ -1147,6 +1147,12 @@ label::after {
     text-align: center;
   }
 
+  @media (max-width: 450px) {
+    .modal_content {
+        width: 90%;
+  }
+}
+
   #modalTitle {
     color: rgb(94, 208, 253);
     font-family: Montserrat;
@@ -1159,6 +1165,8 @@ label::after {
   }
 
   #modalExtraText {
+    display: flex;
+    justify-content: center;
     width: 350px;
     margin-top: 10px;
     font-size: 25px;
@@ -1169,6 +1177,13 @@ label::after {
     font-style: italic;
     padding: 10px;
     margin: 15px;
+}
+
+@media (max-width: 450px) {
+    #modalExtraText {
+        justify-content: center;
+        width: 85%;
+  }
 }
   
   .close {
