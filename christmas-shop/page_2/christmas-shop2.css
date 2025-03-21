@@ -487,6 +487,12 @@ label::after {
     margin: 0;
 }
 
+@media (max-width: 500px) {
+    .options_word {
+        letter-spacing: 0.015em;
+    }
+}
+
 .options_block_2 {
     display: flex;
     justify-content: center;
