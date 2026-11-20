@@ -606,3 +606,90 @@
     transform:scale(.58);
   }
 }
+
+
+/* Unified monochrome winter palette for dark mode — no red accents or hover states */
+:root[data-theme="dark"]{
+  --red:#e6f0ff;
+  --red-dark:#b9cce8;
+  --accent:#e6f0ff;
+}
+:root[data-theme="dark"] .hero{
+  background:
+    radial-gradient(ellipse at 78% 17%,rgb(116 153 205 / 17%),transparent 34%),
+    radial-gradient(ellipse at 48% 100%,rgb(78 111 163 / 16%),transparent 48%),
+    linear-gradient(180deg,#050916 0%,#091329 58%,#101d35 100%);
+}
+:root[data-theme="dark"] .desktop-nav a:hover,
+:root[data-theme="dark"] .desktop-nav a.is-active,
+:root[data-theme="dark"] .desktop-nav a:focus-visible{
+  background:rgb(222 235 255 / 13%);
+  color:#f7faff;
+}
+:root[data-theme="dark"] .about-section .eyebrow,
+:root[data-theme="dark"] .section-heading .eyebrow,
+:root[data-theme="dark"] .catalog-hero .eyebrow,
+:root[data-theme="dark"] .countdown-section .eyebrow,
+:root[data-theme="dark"] .eyebrow{
+  color:#dceaff;
+}
+:root[data-theme="dark"] .art-sticker{
+  background:linear-gradient(145deg,#fffdf5,#dcecff);
+  color:#27344d;
+  border-color:rgb(255 255 255 / 72%);
+}
+:root[data-theme="dark"] .button--red,
+:root[data-theme="dark"] .button--red:hover,
+:root[data-theme="dark"] .button--red:focus-visible{
+  background:linear-gradient(135deg,#fffdf5 0%,#dcecff 100%);
+  color:#172238;
+  border-color:#fff;
+  box-shadow:0 8px 26px rgb(207 229 255 / 18%),inset 0 1px 0 #fff;
+}
+:root[data-theme="dark"] .button--red span,
+:root[data-theme="dark"] .text-link span,
+:root[data-theme="dark"] .gift-card__hint span{
+  color:#d9eaff;
+}
+:root[data-theme="dark"] .filter-button:hover,
+:root[data-theme="dark"] .filter-button.is-selected,
+:root[data-theme="dark"] .filter-button:focus-visible{
+  background:linear-gradient(135deg,#fffdf5,#dcecff);
+  border-color:#fff;
+  color:#172238;
+  box-shadow:0 5px 18px rgb(207 229 255 / 12%);
+}
+:root[data-theme="dark"] .filter-button.is-selected span{color:#667b9d}
+:root[data-theme="dark"] .contact-card:hover,
+:root[data-theme="dark"] .contact-card:focus-visible{
+  background:#35415b;
+  border-color:rgb(220 234 255 / 30%);
+  color:#fff;
+  box-shadow:0 12px 28px rgb(0 0 0 / 20%);
+}
+:root[data-theme="dark"] .dialog-bonus{
+  background:rgb(211 229 255 / 12%);
+  color:#e5efff;
+}
+:root[data-theme="dark"] .language-toggle:hover,
+:root[data-theme="dark"] .theme-toggle:hover,
+:root[data-theme="dark"] .language-toggle:focus-visible,
+:root[data-theme="dark"] .theme-toggle:focus-visible{
+  background:rgb(222 235 255 / 16%);
+  border-color:#dceaff;
+  color:#fff;
+}
+:root[data-theme="dark"] a:hover,
+:root[data-theme="dark"] button:hover{
+  text-decoration-color:#dceaff;
+}
+:root[data-theme="dark"] .catalog-sparkle,
+:root[data-theme="dark"] .hero-snow{
+  color:rgb(239 247 255 / 76%);
+  text-shadow:0 0 14px rgb(205 228 255 / 25%);
+}
+:root[data-theme="dark"] .eyebrow--work,
+:root[data-theme="dark"] .eyebrow--health,
+:root[data-theme="dark"] .eyebrow--harmony{
+  color:#dceaff;
+}
