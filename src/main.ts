@@ -501,6 +501,21 @@ const render = (): void => {
   updateDocumentLanguage();
   app!.innerHTML = isGiftsPage ? renderGifts() : renderHome();
 
+  app!.querySelectorAll<HTMLAnchorElement>('a[href*="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin || destination.pathname !== window.location.pathname || !destination.hash) return;
+
+      const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+      if (!target) return;
+
+      event.preventDefault();
+      window.history.pushState(null, '', destination.hash);
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
   const menuToggle = app!.querySelector<HTMLButtonElement>('.menu-toggle');
   const mobileNav = app!.querySelector<HTMLElement>('.mobile-nav');
 
@@ -552,6 +567,20 @@ const render = (): void => {
 };
 
 render();
+
+if (window.location.hash) {
+  const targetId = decodeURIComponent(window.location.hash.slice(1));
+  const target = document.getElementById(targetId);
+  if (target) {
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    window.scrollTo(0, 0);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  }
+}
+
 if (!isGiftsPage) {
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
