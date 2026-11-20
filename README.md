@@ -1,38 +1,82 @@
 # Christmas Shop
 
-A responsive holiday gift storefront rebuilt with a lightweight modern frontend toolchain.
+**Демо:** https://artkoro94.github.io/christmas-shop/
 
-## Stack
-- Vite 7
-- TypeScript 5.9 (strict mode)
-- Modern CSS with responsive layouts and reduced-motion support
-- Native HTML dialog and browser APIs
+Адаптивный интернет-магазин новогодних подарков с праздничным оформлением. Проект создан на Vanilla TypeScript, HTML и CSS с использованием Vite.
 
-## Features
-- Refreshed home page with featured gifts and a New Year countdown
-- Gift catalogue with functional category filters
-- Accessible gift details dialog (Escape-to-close and focus management)
-- Responsive navigation and layouts
-- Native lazy loading for images below the fold
-- GitHub Pages asset base path
+## Возможности
 
-## Development
-Requires Node.js 20.19+ or 22.12+.
+- Главная страница с подборкой подарков и обратным отсчётом до Нового года.
+- Каталог подарков с работающей фильтрацией по категориям.
+- Диалоговое окно с подробной информацией о подарке.
+- Доступное управление диалоговым окном: закрытие клавишей Escape и управление фокусом.
+- Адаптивная навигация и вёрстка для разных размеров экранов.
+- Отложенная загрузка изображений, расположенных ниже первого экрана.
+- Поддержка настройки уменьшения анимации.
+- Настроенный базовый путь для публикации на GitHub Pages.
+
+## Технологии
+
+- **HTML5** — структура страниц.
+- **CSS3** — стили, адаптивная вёрстка и анимации.
+- **TypeScript 5.9** — логика приложения со строгой типизацией.
+- **Vite 7** — сервер разработки и сборка проекта.
+- **Нативные API браузера** — HTML Dialog и работа с DOM.
+
+Проект не использует React, Vue, Angular или другие UI-фреймворки и библиотеки компонентов.
+
+## Требования
+
+- Node.js 20.19+ или 22.12+
+- npm
+
+## Установка и запуск
+
+Клонируйте репозиторий:
+
+```bash
+git clone https://github.com/artkoro94/christmas-shop.git
+cd christmas-shop
+```
+
+Установите зависимости:
 
 ```bash
 npm install
+```
+
+Запустите сервер разработки:
+
+```bash
 npm run dev
 ```
 
-## Quality checks
+Vite выведет локальный адрес приложения в терминале.
+
+## Проверка и сборка
+
+Доступные команды:
+
+| Команда | Назначение |
+| --- | --- |
+| `npm run check` | Проверка типов TypeScript. |
+| `npm run lint` | Проверка кода с помощью ESLint. |
+| `npm run build` | Создание production-сборки в директории `dist/`. |
+| `npm run preview` | Локальный просмотр production-сборки. |
+| `npm run format` | Форматирование файлов с помощью Prettier. |
+
+Перед отправкой изменений рекомендуется выполнить:
+
 ```bash
 npm run check
 npm run lint
 npm run build
-npm run preview
 ```
 
-Build output is generated in `dist/`. Configure GitHub Pages to deploy the `dist` directory.
+## Публикация
 
-## Performance
-No runtime framework or component library is shipped. Vite bundles and minifies the TypeScript/CSS, images below the fold are lazy-loaded, and both pages share one app entry and stylesheet. Existing image assets are retained to preserve the visual identity; WebP/AVIF derivatives are the next step for further transfer-size reductions.
+Проект настроен для публикации на GitHub Pages по адресу:
+
+https://artkoro94.github.io/christmas-shop/
+
+Для production-развёртывания необходимо собрать проект командой `npm run build` и опубликовать содержимое директории `dist/`. Базовый путь проекта задаётся в конфигурации Vite.
