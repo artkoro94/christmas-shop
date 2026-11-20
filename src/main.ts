@@ -40,7 +40,7 @@ const footer=():string=>`
 <a class="contact-card" href="tel:+375291112233"><img src="${asset('footer/santa.svg')}" alt="" width="64" height="64" loading="lazy"><strong>+375 (29) 111-22-33</strong><span>Call us</span></a>
 <a class="contact-card" href="https://maps.app.goo.gl/5JS5cqrWr2L7g7dG6" target="_blank" rel="noopener noreferrer"><img src="${asset('footer/tree.svg')}" alt="" width="64" height="64" loading="lazy"><strong>Magic forest</strong><span>Meet us</span></a>
 <a class="contact-card" href="mailto:gifts@magic.com"><img src="${asset('footer/snake.svg')}" alt="" width="64" height="64" loading="lazy"><strong>Gifts@magic.com</strong><span>Write us</span></a></div>
-<p class="copyright">© 2026 Christmas Shop. Made with a little holiday magic.</p><a class="school-link" href="https://rs.school/" target="_blank" rel="noopener noreferrer">Made in Rolling Scopes School</a></footer>`;
+<p class="copyright">© 2026 Christmas Shop. Made with a little holiday magic.</p></footer>`;
 const modal=`<dialog class="gift-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="dialog-close" aria-label="Close dialog">×</button></form><img class="dialog-image" src="" alt="" width="310" height="230"><div class="dialog-body"><span class="eyebrow dialog-category"></span><h2 id="dialog-title"></h2><p class="dialog-description"></p><p class="dialog-bonus"></p></div></dialog>`;
 const isGiftsPage=window.location.pathname.includes('/gifts')||window.location.pathname.includes('christmas-shop2');
 const app=document.querySelector<HTMLDivElement>('#app');
