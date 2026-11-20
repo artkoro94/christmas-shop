@@ -797,3 +797,14 @@
   .gift-card__media img{width:min(100%,150px)}
   :root[data-theme="dark"] .catalog-hero{min-height:290px}
 }
+
+
+/* Keep the catalogue sparkle clear of the moon */
+:root[data-theme="dark"] .catalog-hero .catalog-sparkle{
+  right:5%;
+}
+@media(max-width:640px){
+  :root[data-theme="dark"] .catalog-hero .catalog-sparkle{
+    right:3%;
+  }
+}
