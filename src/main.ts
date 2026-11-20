@@ -499,9 +499,17 @@ const renderGifts = (): string => `
 ${header('gifts')}
 <main class="catalog-page">
   <section class="catalog-hero">
-    <span class="eyebrow">${t('catalogKicker')}</span>
-    <h1>${t('findYour')} <em>${t('magic')}</em></h1>
-    <p>${t('catalogText')}</p>
+    <div class="winter-night" aria-hidden="true">
+      <span class="winter-moon"></span>
+      <span class="winter-stars winter-stars--one"></span>
+      <span class="winter-stars winter-stars--two"></span>
+    </div>
+    <div class="snowfall" aria-hidden="true"><span class="snowfall__layer snowfall__layer--back"></span><span class="snowfall__layer snowfall__layer--front"></span></div>
+    <div class="catalog-hero__content">
+      <span class="eyebrow">${t('catalogKicker')}</span>
+      <h1>${t('findYour')} <em>${t('magic')}</em></h1>
+      <p>${t('catalogText')}</p>
+    </div>
     <span class="catalog-sparkle" aria-hidden="true">✳</span>
   </section>
   <section class="catalog-content">
