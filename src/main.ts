@@ -293,7 +293,6 @@ const giftCard = (gift: Gift): string => `
   <span class="gift-card__content">
     <span class="eyebrow eyebrow--${gift.category}">${categoryLabel(gift.category)}</span>
     <span class="gift-card__title">${gift.title[language]}</span>
-    <span class="gift-card__hint">${t('discoverGift')} <span aria-hidden="true">↗</span></span>
   </span>
 </button>`;
 
