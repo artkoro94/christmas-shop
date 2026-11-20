@@ -431,3 +431,60 @@
 @media(max-width:640px){
   :root[data-theme="dark"] .about-art{min-height:320px}
 }
+
+
+/* Bring the reindeer to life: a gentle gallop, bouncing harness and lively sleigh */
+.winter-flight__reindeer{
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:reindeer-bob .62s ease-in-out infinite alternate;
+}
+.winter-flight__reindeer:nth-of-type(2){animation-delay:-.31s}
+.winter-flight__legs{
+  transform-box:fill-box;
+  transform-origin:50% 0%;
+  animation:reindeer-gallop .34s ease-in-out infinite alternate;
+}
+.winter-flight__reindeer:nth-of-type(2) .winter-flight__legs{animation-delay:-.17s}
+.winter-flight__antlers{
+  transform-box:fill-box;
+  transform-origin:50% 100%;
+  animation:antlers-bounce .62s ease-in-out infinite alternate;
+}
+.winter-flight__sleigh{
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:sleigh-bounce .62s ease-in-out infinite;
+}
+.winter-flight__presents{
+  transform-box:fill-box;
+  transform-origin:center bottom;
+  animation:present-jiggle .62s ease-in-out infinite alternate;
+}
+@keyframes reindeer-bob{
+  from{translate:0 2px}
+  to{translate:0 -5px}
+}
+@keyframes reindeer-gallop{
+  from{rotate:-13deg}
+  to{rotate:16deg}
+}
+@keyframes antlers-bounce{
+  from{rotate:-3deg}
+  to{rotate:4deg}
+}
+@keyframes sleigh-bounce{
+  0%,100%{translate:0 1px;rotate:0deg}
+  50%{translate:0 -5px;rotate:-1deg}
+}
+@keyframes present-jiggle{
+  from{rotate:-5deg}
+  to{rotate:5deg}
+}
+@media(prefers-reduced-motion:reduce){
+  .winter-flight__reindeer,
+  .winter-flight__legs,
+  .winter-flight__antlers,
+  .winter-flight__sleigh,
+  .winter-flight__presents{animation:none!important}
+}
