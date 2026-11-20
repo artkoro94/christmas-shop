@@ -28,6 +28,7 @@ const translations = {
     giftsDescription: 'Explore holiday gifts for work, health and harmony.',
     homeLink: 'Christmas Shop home',
     switchLanguage: 'Switch language',
+    switchTheme: 'Switch color theme',
     gifts: 'Gifts',
     about: 'About',
     best: 'Best',
@@ -100,7 +101,8 @@ const translations = {
     giftsPage: 'Подарки — Christmas Shop',
     giftsDescription: 'Праздничные подарки для работы, здоровья и гармонии.',
     homeLink: 'На главную Christmas Shop',
-    switchLanguage: 'Сменить язык',
+    switchLanguage: 'Сменить цветовую тему',
+    switchTheme: 'Переключить цветовую тему',
     gifts: 'Подарки',
     about: 'О нас',
     best: 'Лучшее',
@@ -178,6 +180,19 @@ try {
 }
 
 const t = (key: keyof typeof translations.en): string => translations[language][key];
+
+type Theme = 'light' | 'dark';
+let theme: Theme = 'light';
+try {
+  const savedTheme = localStorage.getItem('christmas-shop-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') theme = savedTheme;
+} catch {
+  // Theme switching remains available for the current page.
+}
+
+const applyTheme = (): void => {
+  document.documentElement.dataset.theme = theme;
+};
 
 const gifts: Gift[] = [
   {
@@ -295,7 +310,10 @@ const header = (active: 'home' | 'gifts'): string => `
       <a href="${import.meta.env.BASE_URL}#best">${t('best')}</a>
       <a href="${import.meta.env.BASE_URL}#contacts">${t('contacts')}</a>
     </nav>
-    <button class="language-toggle" type="button" data-language-toggle aria-label="${t('switchLanguage')}">${language === 'en' ? 'RU' : 'EN'}</button>
+    <div class="header-actions">
+      <button class="language-toggle" type="button" data-language-toggle aria-label="${t('switchLanguage')}">${language === 'en' ? 'RU' : 'EN'}</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="${t('switchTheme')}" aria-pressed="${theme === 'dark'}"><span aria-hidden="true">${theme === 'dark' ? '☀' : '☾'}</span></button>
+    </div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="${t('openMenu')}">
       <span></span><span></span>
     </button>
@@ -341,6 +359,7 @@ const modal = (): string => `
 
 const updateDocumentLanguage = (): void => {
   document.documentElement.lang = language;
+  applyTheme();
   document.title = isGiftsPage ? t('giftsPage') : t('home');
   const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
   if (description) description.content = isGiftsPage ? t('giftsDescription') : t('homeDescription');
@@ -369,6 +388,7 @@ const renderHome = (): string => `
 ${header('home')}
 <main>
   <section class="hero">
+    <div class="snowfall" aria-hidden="true"><span class="snowfall__layer snowfall__layer--back"></span><span class="snowfall__layer snowfall__layer--front"></span></div>
     <div class="hero-art" aria-hidden="true"></div>
     <div class="hero-content">
       <span class="hero-kicker">${t('heroKicker')}</span>
@@ -533,6 +553,19 @@ const render = (): void => {
     menuToggle?.setAttribute('aria-label', t('openMenu'));
     document.body.classList.remove('menu-open');
   }));
+
+  app!.querySelector<HTMLButtonElement>('[data-theme-toggle]')?.addEventListener('click', () => {
+    theme = theme === 'light' ? 'dark' : 'light';
+    try {
+      localStorage.setItem('christmas-shop-theme', theme);
+    } catch {
+      // Theme switching remains available for the current page.
+    }
+    applyTheme();
+    render();
+    if (isGiftsPage) applyFilter(activeFilter);
+    if (!isGiftsPage) updateCountdown();
+  });
 
   app!.querySelector<HTMLButtonElement>('[data-language-toggle]')?.addEventListener('click', () => {
     language = language === 'en' ? 'ru' : 'en';
