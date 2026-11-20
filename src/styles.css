@@ -488,3 +488,16 @@
   .winter-flight__sleigh,
   .winter-flight__presents{animation:none!important}
 }
+
+
+/* Match the dark moments section to the midnight countdown palette */
+:root[data-theme="dark"] .moments-section{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgb(182 211 255 / 8%),transparent 48%),
+    linear-gradient(180deg,#070d1c 0%,#0b162b 58%,#101d35 100%);
+}
+:root[data-theme="dark"] .moments-track article{
+  background:#1b263d;
+  border:1px solid rgb(218 233 255 / 9%);
+  box-shadow:0 12px 32px rgb(0 0 0 / 12%);
+}
