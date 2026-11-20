@@ -472,7 +472,7 @@ const applyFilter = (filter: Filter): void => {
 
   const count = app?.querySelector<HTMLElement>('.results-count');
   const empty = app?.querySelector<HTMLElement>('.empty-state');
-  if (count) count.innerHTML = `<strong>${visible.length}</strong> ${giftCountLabel(visible.length).replace(/^\\d+\\s*/, '')}`;
+  if (count) count.innerHTML = `<strong>${visible.length}</strong> ${giftCountLabel(visible.length).slice(String(visible.length).length + 1)}`;
   if (empty) empty.hidden = visible.length > 0;
 };
 
