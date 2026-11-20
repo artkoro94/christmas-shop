@@ -588,3 +588,21 @@
 @media(prefers-reduced-motion:reduce){
   .winter-flight{animation:none!important;left:8%;top:5%;opacity:.82;transform:scale(.72);transform-origin:left top}
 }
+
+
+/* Keep the sleigh artwork static; retain the surrounding snowfall and stars */
+.winter-flight{
+  animation:none!important;
+  left:8%;
+  top:5%;
+  opacity:.82;
+  transform:scale(.72);
+  transform-origin:left top;
+}
+@media(max-width:640px){
+  .winter-flight{
+    left:5%;
+    top:7%;
+    transform:scale(.58);
+  }
+}
