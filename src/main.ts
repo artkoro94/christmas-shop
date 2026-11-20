@@ -169,7 +169,7 @@ const translations = {
   },
 } satisfies Record<Language, Record<string, string>>;
 
-let language: Language = 'en';
+let language: Language = 'ru';
 try {
   const savedLanguage = localStorage.getItem('christmas-shop-language');
   if (savedLanguage === 'en' || savedLanguage === 'ru') language = savedLanguage;
