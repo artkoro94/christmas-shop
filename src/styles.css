@@ -139,3 +139,90 @@
   border-color:#98616b;
   color:#f5d8d0;
 }
+
+
+/* Dark theme refresh: festive, vivid and warm rather than muted */
+:root[data-theme="dark"]{
+  --red:#ff8580;
+  --red-dark:#ed626c;
+  --ink:#fff4ed;
+  --muted:#c9c1ca;
+  --cream:#29283a;
+  --mist:#30334a;
+  --shadow:0 22px 60px rgb(0 0 0 / 30%);
+}
+:root[data-theme="dark"] body{background:#171b2c;color:#fff4ed}
+:root[data-theme="dark"] .site-header{background:rgb(23 27 44 / 96%)}
+:root[data-theme="dark"] .desktop-nav a:hover,
+:root[data-theme="dark"] .desktop-nav a.is-active{background:#493047;color:#ffaaa1}
+:root[data-theme="dark"] .hero{
+  background:
+    radial-gradient(ellipse at 50% 42%,rgb(255 151 133 / 40%) 0,transparent 38%),
+    linear-gradient(118deg,#a92f50 0%,#d84960 48%,#ee716d 100%);
+}
+:root[data-theme="dark"] .hero:before,
+:root[data-theme="dark"] .hero:after{border-color:rgb(255 235 225 / 23%)}
+:root[data-theme="dark"] .hero-art{opacity:.22}
+:root[data-theme="dark"] .hero-signoff{color:#ffe0d4}
+:root[data-theme="dark"] .hero-snow{color:rgb(255 244 235 / 62%)}
+:root[data-theme="dark"] .snowfall__layer--back{opacity:.46}
+:root[data-theme="dark"] .snowfall__layer--front{opacity:.68}
+:root[data-theme="dark"] .about-section .eyebrow,
+:root[data-theme="dark"] .section-heading .eyebrow{color:#ff9288}
+:root[data-theme="dark"] .about-art{background:#303044}
+:root[data-theme="dark"] .art-sticker{background:#ed626c;color:#fff8f1}
+:root[data-theme="dark"] .moments-section{background:#20243a}
+:root[data-theme="dark"] .moments-track article{background:#30344b;color:#fff4ed}
+:root[data-theme="dark"] .gift-card{background:#292e45;color:#fff4ed}
+:root[data-theme="dark"] .gift-card__media{background:#373b55}
+:root[data-theme="dark"] .gift-card__hint{color:#ded3d8}
+:root[data-theme="dark"] .gift-card__hint span,
+:root[data-theme="dark"] .text-link span{color:#ff9288}
+:root[data-theme="dark"] .button--red{
+  background:linear-gradient(115deg,#f16b70,#ff8580);
+  color:#271d2b;
+  box-shadow:0 9px 26px rgb(237 98 108 / 24%);
+}
+:root[data-theme="dark"] .button--red:hover{
+  background:linear-gradient(115deg,#ff8580,#ffa08b);
+  box-shadow:0 12px 30px rgb(237 98 108 / 32%);
+}
+:root[data-theme="dark"] .countdown-section{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgb(255 137 129 / 24%),transparent 54%),
+    linear-gradient(120deg,#632b50 0%,#92364f 52%,#b74758 100%);
+}
+:root[data-theme="dark"] .countdown-section .eyebrow{color:#ffd1bd}
+:root[data-theme="dark"] .countdown-section>p{color:#ffe2d9}
+:root[data-theme="dark"] .countdown div{
+  border-color:rgb(255 235 225 / 34%);
+  background:rgb(255 255 255 / 10%);
+  box-shadow:inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+:root[data-theme="dark"] .catalog-page,
+:root[data-theme="dark"] .catalog-content{background:#171b2c}
+:root[data-theme="dark"] .catalog-hero{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgb(255 151 133 / 26%),transparent 52%),
+    linear-gradient(125deg,#702d50,#a83e58 58%,#d45a62);
+}
+:root[data-theme="dark"] .catalog-hero .eyebrow{color:#ffd2c2}
+:root[data-theme="dark"] .catalog-hero p{color:#ffe5dc}
+:root[data-theme="dark"] .catalog-sparkle{color:rgb(255 240 228 / 26%)}
+:root[data-theme="dark"] .filter-button{background:#292e45;border-color:#48445c;color:#f8eee9}
+:root[data-theme="dark"] .filter-button:hover,
+:root[data-theme="dark"] .filter-button.is-selected{
+  background:#ffb19c;
+  border-color:#ffb19c;
+  color:#332333;
+}
+:root[data-theme="dark"] .contact-card{background:#292e45;color:#fff4ed}
+:root[data-theme="dark"] .contact-card:hover{background:#3a304a}
+:root[data-theme="dark"] .gift-dialog{background:#292e45;color:#fff4ed}
+:root[data-theme="dark"] .dialog-close{background:#3a4059;color:#fff8f1}
+:root[data-theme="dark"] .dialog-bonus{background:#493047;color:#ffaaa1}
+:root[data-theme="dark"] .language-toggle,
+:root[data-theme="dark"] .theme-toggle{background:#2c3149;border-color:#55516a;color:#fff4ed}
+:root[data-theme="dark"] .language-toggle:hover,
+:root[data-theme="dark"] .theme-toggle:hover{background:#493047;border-color:#e98283;color:#fff4ed}
+:root[data-theme="dark"] .copyright{color:#c1b9c4}
