@@ -1,57 +1,38 @@
 # Christmas Shop
 
-## Описание
-Christmas Shop — это адаптивный интернет-магазин с праздничной тематикой. Проект разработан с использованием HTML, CSS и JavaScript и демонстрирует мои навыки во фронтенд-разработке, включая создание адаптивного интерфейса и работу с DOM.
+A responsive holiday gift storefront rebuilt with a lightweight modern frontend toolchain.
 
-## Функционал
-- 📱 **Адаптивный дизайн**: Сайт корректно отображается на мобильных устройствах, планшетах и десктопах.
-- ⚡ **Интерактивность**: Использование JavaScript для динамической работы с элементами страницы.
-- 🚀 **Оптимизация производительности**: Минимизация стилей и скриптов для быстрой загрузки.
-
-## Технологии
-- **HTML5**: Семантическая разметка
-- **CSS3**: Flexbox, Media Queries для адаптивности
-- **JavaScript**: Манипуляция DOM, обработка событий
-
-## Запуск проекта
-Чтобы ознакомиться с проектом, перейдите по ссылке на проект -> https://artkoro94.github.io/christmas-shop/christmas-shop/christmas-shop.html. Это позволит вам увидеть сайт в действии без необходимости клонировать репозиторий.
-
-## О себе
-Я стремлюсь к развитию в области фронтенд-разработки, активно изучаю JavaScript и применяю современные подходы в создании интерфейсов. Этот проект — демонстрация моих навыков в работе с адаптивной версткой и интерактивными элементами.
-
----
-
-🎄 _Спасибо за внимание! Ваши отзывы и предложения приветствуются._
-
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-# Christmas Shop
-
-## Description
-Christmas Shop is an adaptive online store with a holiday theme. The project is developed using HTML, CSS, and JavaScript, showing my skills in frontend development, including creating responsive design and working with the DOM.
+## Stack
+- Vite 7
+- TypeScript 5.9 (strict mode)
+- Modern CSS with responsive layouts and reduced-motion support
+- Native HTML dialog and browser APIs
 
 ## Features
-- 📱 **Responsive Design**: The site displays correctly on mobile devices, tablets, and desktops.
-- ⚡ **Interactivity**: JavaScript is used to dynamically work with page elements.
-- 🚀 **Performance Optimization**: Minimization of styles and scripts for fast loading.
+- Refreshed home page with featured gifts and a New Year countdown
+- Gift catalogue with functional category filters
+- Accessible gift details dialog (Escape-to-close and focus management)
+- Responsive navigation and layouts
+- Native lazy loading for images below the fold
+- GitHub Pages asset base path
 
-## Technologies
-- **HTML5**: Semantic markup
-- **CSS3**: Flexbox, Media Queries for responsiveness
-- **JavaScript**: DOM manipulation, event handling
+## Development
+Requires Node.js 20.19+ or 22.12+.
 
-## How to Run the Project
-To view the project, go to this link -> https://artkoro94.github.io/christmas-shop/christmas-shop/christmas-shop.html. This allows you to see the website in action without the need to clone the repository.
+```bash
+npm install
+npm run dev
+```
 
-## About Me
-I am focused on developing my skills in frontend development. I actively study JavaScript and apply modern approaches to create interfaces. This project demonstrates my skills in responsive design and interactive elements.
+## Quality checks
+```bash
+npm run check
+npm run lint
+npm run build
+npm run preview
+```
 
----
+Build output is generated in `dist/`. Configure GitHub Pages to deploy the `dist` directory.
 
-🎄 _Thank you for your attention! Your feedback and suggestions are welcome._
-
-
+## Performance
+No runtime framework or component library is shipped. Vite bundles and minifies the TypeScript/CSS, images below the fold are lazy-loaded, and both pages share one app entry and stylesheet. Existing image assets are retained to preserve the visual identity; WebP/AVIF derivatives are the next step for further transfer-size reductions.
