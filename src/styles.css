@@ -400,3 +400,28 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .winter-stars,.snowfall__layer{animation:none!important;will-change:auto}
   *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Softer, centered moment cards */
+.moments-track article{
+  justify-content:center;
+  gap:18px;
+  padding:22px 16px;
+  border-radius:26px;
+}
+.moments-track article span{
+  text-align:center;
+}
+.moments-track img{
+  display:block;
+  width:170px;
+  height:170px;
+  max-width:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:26px;
+}
+@media(max-width:640px){
+  .moments-track article{border-radius:22px;gap:14px}
+  .moments-track img{width:135px;height:135px;border-radius:22px}
+}
