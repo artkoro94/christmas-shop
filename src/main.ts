@@ -37,7 +37,7 @@ const header=(active:'home'|'gifts'):string=>`
 <a href="${import.meta.env.BASE_URL}gifts/">Gifts</a><a href="${import.meta.env.BASE_URL}#about">About</a><a href="${import.meta.env.BASE_URL}#best">Best</a><a href="${import.meta.env.BASE_URL}#contacts">Contacts</a></nav></header>`;
 const footer=():string=>`
 <footer class="site-footer" id="contacts"><div class="contact-grid">
-<a class="contact-card" href="tel:+375291112233"><img src="${asset('footer/santa.svg')}" alt="" width="64" height="64" loading="lazy"><strong>+375 (29) 111-22-33</strong><span>Call us</span></a>
+<a class="contact-card" href="tel:+79991234567"><img src="${asset('footer/santa.svg')}" alt="" width="64" height="64" loading="lazy"><strong>+7 (999) 123-45-67</strong><span>Call us</span></a>
 <a class="contact-card" href="https://maps.app.goo.gl/5JS5cqrWr2L7g7dG6" target="_blank" rel="noopener noreferrer"><img src="${asset('footer/tree.svg')}" alt="" width="64" height="64" loading="lazy"><strong>Magic forest</strong><span>Meet us</span></a>
 <a class="contact-card" href="mailto:gifts@magic.ru"><img src="${asset('footer/snake.svg')}" alt="" width="64" height="64" loading="lazy"><strong>Gifts@magic.ru</strong><span>Write us</span></a></div>
 <p class="copyright">© 2026 Christmas Shop. Made with a little holiday magic.</p></footer>`;
