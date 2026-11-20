@@ -254,6 +254,16 @@ const gifts: Gift[] = [
   },
 ];
 
+const giftCountLabel = (count: number): string => {
+  if (language === 'en') return `${count} ${count === 1 ? 'gift' : 'gifts'} to discover`;
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  const noun = mod10 === 1 && mod100 !== 11 ? 'подарок'
+    : mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14) ? 'подарка'
+    : 'подарков';
+  return `${count} ${noun}`;
+};
+
 const categoryLabel = (category: Category): string => ({
   work: t('forWork'),
   health: t('forHealth'),
@@ -462,7 +472,7 @@ const applyFilter = (filter: Filter): void => {
 
   const count = app?.querySelector<HTMLElement>('.results-count');
   const empty = app?.querySelector<HTMLElement>('.empty-state');
-  if (count) count.innerHTML = `<strong>${visible.length}</strong> ${t('giftsToDiscover')}`;
+  if (count) count.innerHTML = `<strong>${visible.length}</strong> ${giftCountLabel(visible.length).replace(/^\\d+\\s*/, '')}`;
   if (empty) empty.hidden = visible.length > 0;
 };
 
