@@ -226,3 +226,89 @@
 :root[data-theme="dark"] .language-toggle:hover,
 :root[data-theme="dark"] .theme-toggle:hover{background:#493047;border-color:#e98283;color:#fff4ed}
 :root[data-theme="dark"] .copyright{color:#c1b9c4}
+
+
+/* Dark winter night: moonlight, stars and a flying Christmas sleigh */
+:root[data-theme="dark"] .hero{
+  background:
+    radial-gradient(ellipse at 78% 17%,rgb(66 92 145 / 25%),transparent 34%),
+    radial-gradient(ellipse at 48% 100%,rgb(40 67 105 / 28%),transparent 48%),
+    linear-gradient(180deg,#050916 0%,#091329 58%,#101d35 100%);
+}
+:root[data-theme="dark"] .hero-art{opacity:.09;mix-blend-mode:screen}
+.winter-night{display:none}
+:root[data-theme="dark"] .winter-night{
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+.winter-moon{
+  position:absolute;
+  top:8%;
+  right:13%;
+  width:clamp(88px,12vw,154px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 32%,#fff9df 0,#f4e8c4 42%,#d8d2c0 74%,#aab8cf 100%);
+  box-shadow:0 0 28px 8px rgb(255 241 198 / 22%),0 0 95px 28px rgb(169 199 240 / 15%);
+}
+.winter-moon:before,.winter-moon:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:rgb(164 168 170 / 17%);
+}
+.winter-moon:before{width:19%;height:14%;top:27%;left:23%;transform:rotate(-25deg)}
+.winter-moon:after{width:25%;height:18%;right:18%;bottom:25%;transform:rotate(20deg)}
+.winter-stars{
+  position:absolute;
+  inset:0;
+  opacity:.78;
+  background-repeat:repeat;
+}
+.winter-stars--one{
+  background-image:radial-gradient(2px 2px at 12% 20%,#fff 95%,transparent),radial-gradient(1.5px 1.5px at 34% 13%,#dce9ff 95%,transparent),radial-gradient(2px 2px at 55% 28%,#fff4d7 95%,transparent),radial-gradient(1.5px 1.5px at 72% 37%,#fff 95%,transparent),radial-gradient(2px 2px at 89% 56%,#fff 95%,transparent);
+  animation:star-twinkle 4.5s ease-in-out infinite alternate;
+}
+.winter-stars--two{
+  opacity:.52;
+  background-image:radial-gradient(1px 1px at 21% 61%,#fff 95%,transparent),radial-gradient(2px 2px at 43% 76%,#dce9ff 95%,transparent),radial-gradient(1px 1px at 66% 16%,#fff 95%,transparent),radial-gradient(1.5px 1.5px at 82% 82%,#fff4d7 95%,transparent);
+  animation:star-twinkle 6s ease-in-out 1s infinite alternate-reverse;
+}
+.winter-flight{
+  position:absolute;
+  top:5%;
+  left:-55%;
+  width:min(620px,58vw);
+  height:auto;
+  overflow:visible;
+  color:#f4d39a;
+  opacity:0;
+  filter:drop-shadow(0 0 8px rgb(255 214 157 / 30%));
+  animation:winter-flight-cross 27s linear 1.2s infinite;
+}
+.winter-flight__team{stroke-width:1}
+.winter-flight__sleigh{filter:drop-shadow(0 0 7px rgb(255 192 125 / 45%))}
+@keyframes winter-flight-cross{
+  0%{transform:translateX(0) translateY(10px) scale(.78);opacity:0}
+  7%{opacity:.96}
+  48%{transform:translateX(145%) translateY(-8px) scale(1);opacity:1}
+  91%{opacity:.95}
+  100%{transform:translateX(290%) translateY(9px) scale(.82);opacity:0}
+}
+@keyframes star-twinkle{from{opacity:.3}to{opacity:.95}}
+:root[data-theme="dark"] .snowfall__layer--back{opacity:.24}
+:root[data-theme="dark"] .snowfall__layer--front{opacity:.42}
+:root[data-theme="dark"] .hero-content{z-index:2}
+@media(max-width:640px){
+  .winter-moon{top:9%;right:8%;width:86px}
+  .winter-flight{top:7%;width:78vw;left:-68%;animation-duration:31s}
+  .winter-stars--one{opacity:.58}
+}
+@media(prefers-reduced-motion:reduce){
+  .winter-flight,.winter-stars{animation:none!important}
+  .winter-flight{left:8%;top:5%;opacity:.72;transform:scale(.72);transform-origin:left top}
+}
