@@ -285,11 +285,10 @@ const categoryLabel = (category: Category): string => ({
   harmony: t('forHarmony'),
 })[category];
 
-const giftCard = (gift: Gift, index: number): string => `
+const giftCard = (gift: Gift): string => `
 <button class="gift-card" type="button" data-gift-id="${gift.id}" aria-label="${t('viewGift')} ${gift.title[language]}">
   <span class="gift-card__media">
     <img src="${asset(gift.image)}" alt="${gift.imageAlt[language]}" width="310" height="230" loading="lazy" decoding="async">
-    <span class="gift-card__number">0${index + 1}</span>
   </span>
   <span class="gift-card__content">
     <span class="eyebrow eyebrow--${gift.category}">${categoryLabel(gift.category)}</span>
