@@ -312,3 +312,62 @@
   .winter-flight,.winter-stars{animation:none!important}
   .winter-flight{left:8%;top:5%;opacity:.72;transform:scale(.72);transform-origin:left top}
 }
+
+
+/* Dark winter palette: icy highlights replace isolated burgundy accents */
+:root[data-theme="dark"] .brand img{
+  filter:brightness(0) invert(1) drop-shadow(0 0 5px rgb(224 239 255 / 42%));
+}
+:root[data-theme="dark"] .hero-snow{
+  color:rgb(239 247 255 / 76%);
+  text-shadow:0 0 14px rgb(205 228 255 / 35%);
+}
+:root[data-theme="dark"] .desktop-nav a.is-active,
+:root[data-theme="dark"] .desktop-nav a:hover{
+  color:#f7f5ed;
+  background:rgb(222 235 255 / 13%);
+}
+:root[data-theme="dark"] .button--red{
+  background:linear-gradient(135deg,#fffdf5 0%,#dcecff 100%);
+  color:#172238;
+  border:1px solid rgb(255 255 255 / 72%);
+  box-shadow:0 8px 26px rgb(207 229 255 / 18%),inset 0 1px 0 #fff;
+}
+:root[data-theme="dark"] .button--red:hover{
+  background:linear-gradient(135deg,#fff 0%,#c9e1ff 100%);
+  color:#111d32;
+  box-shadow:0 11px 32px rgb(207 229 255 / 27%);
+}
+:root[data-theme="dark"] .button--red span{color:#7189ad}
+:root[data-theme="dark"] .filter-button.is-selected,
+:root[data-theme="dark"] .filter-button:hover{
+  background:linear-gradient(135deg,#fffdf5,#dcecff);
+  border-color:#fff;
+  color:#172238;
+  box-shadow:0 5px 18px rgb(207 229 255 / 12%);
+}
+:root[data-theme="dark"] .filter-button.is-selected span{color:#667b9d}
+:root[data-theme="dark"] .art-sticker{
+  background:linear-gradient(145deg,#fffdf5,#dcecff);
+  color:#27344d;
+  box-shadow:0 8px 28px rgb(207 229 255 / 20%);
+}
+:root[data-theme="dark"] .eyebrow--work,
+:root[data-theme="dark"] .eyebrow--health,
+:root[data-theme="dark"] .eyebrow--harmony{
+  color:#dceaff;
+}
+:root[data-theme="dark"] .gift-card__hint span,
+:root[data-theme="dark"] .text-link span{
+  color:#d9eaff;
+}
+:root[data-theme="dark"] .dialog-bonus{
+  background:rgb(211 229 255 / 12%);
+  color:#e5efff;
+}
+:root[data-theme="dark"] .language-toggle:hover,
+:root[data-theme="dark"] .theme-toggle:hover{
+  background:rgb(222 235 255 / 16%);
+  border-color:#dceaff;
+  color:#fff;
+}
