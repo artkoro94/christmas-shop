@@ -435,3 +435,16 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   display:none !important;
   content:none !important;
 }
+
+
+/* Keep the illustration aligned with the full arch frame */
+.about-art img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+.art-sticker{z-index:1}
