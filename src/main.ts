@@ -27,6 +27,7 @@ const translations = {
     giftsPage: 'Explore Gifts — Christmas Shop',
     giftsDescription: 'Explore holiday gifts for work, health and harmony.',
     homeLink: 'Christmas Shop home',
+    switchLanguage: 'Switch language',
     gifts: 'Gifts',
     about: 'About',
     best: 'Best',
@@ -99,6 +100,7 @@ const translations = {
     giftsPage: 'Подарки — Christmas Shop',
     giftsDescription: 'Праздничные подарки для работы, здоровья и гармонии.',
     homeLink: 'На главную Christmas Shop',
+    switchLanguage: 'Сменить язык',
     gifts: 'Подарки',
     about: 'О нас',
     best: 'Лучшее',
@@ -283,7 +285,7 @@ const header = (active: 'home' | 'gifts'): string => `
       <a href="${import.meta.env.BASE_URL}#best">${t('best')}</a>
       <a href="${import.meta.env.BASE_URL}#contacts">${t('contacts')}</a>
     </nav>
-    <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">${language === 'en' ? 'RU' : 'EN'}</button>
+    <button class="language-toggle" type="button" data-language-toggle aria-label="${t('switchLanguage')}">${language === 'en' ? 'RU' : 'EN'}</button>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="${t('openMenu')}">
       <span></span><span></span>
     </button>
