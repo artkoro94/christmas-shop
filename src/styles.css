@@ -516,3 +516,40 @@
 :root:not([data-theme="dark"]) .moments-section .section-heading p{
   color:#ffe3df;
 }
+
+
+/* Refined motion for the redrawn sleigh illustration */
+.winter-flight__reindeer{
+  animation:reindeer-bob .72s ease-in-out infinite alternate;
+}
+.winter-flight__reindeer--two{animation-delay:-.36s}
+.winter-flight__reindeer__body{transform-box:fill-box}
+.winter-flight__legs{
+  animation:none;
+}
+.winter-flight__legs path{
+  transform-box:fill-box;
+  transform-origin:50% 0%;
+  animation:leg-gallop .38s ease-in-out infinite alternate;
+}
+.winter-flight__legs path:nth-child(2){animation-delay:-.19s}
+.winter-flight__legs path:nth-child(3){animation-delay:-.09s}
+.winter-flight__reindeer--two .winter-flight__legs path{animation-delay:-.16s}
+.winter-flight__reindeer--two .winter-flight__legs path:nth-child(2){animation-delay:-.35s}
+.winter-flight__reindeer--two .winter-flight__legs path:nth-child(3){animation-delay:-.25s}
+.winter-flight__santa{
+  transform-box:fill-box;
+  transform-origin:center bottom;
+  animation:santa-bob .72s ease-in-out infinite alternate;
+}
+@keyframes leg-gallop{
+  from{rotate:-18deg}
+  to{rotate:19deg}
+}
+@keyframes santa-bob{
+  from{translate:0 1px}
+  to{translate:0 -3px}
+}
+@media(prefers-reduced-motion:reduce){
+  .winter-flight__legs path,.winter-flight__santa{animation:none!important}
+}
