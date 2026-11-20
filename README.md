@@ -15,12 +15,18 @@ A festive, responsive gift storefront built with Vite and TypeScript. The projec
 
 ## Tech stack
 
+- **Vanilla TypeScript** — application logic and DOM interactions, without a UI framework.
+- **HTML5** — semantic page structure.
+- **CSS3** — responsive layouts, theme variables, animations, and motion preferences.
 - [Vite 7](https://vite.dev/) — development server and production bundler.
-- [TypeScript 5.9](https://www.typescriptlang.org/) — strict type checking.
-- Modern CSS — responsive layouts, theme variables, and motion preferences.
+- [TypeScript 5.9](https://www.typescriptlang.org/) — strict static type checking.
 - Native browser APIs — HTML dialog, local storage, and DOM events.
 
-The app does not use a runtime UI framework or component library.
+## Architecture
+
+Christmas Shop is a **framework-free frontend project**. It follows the Vanilla JS approach: the interface is built with native browser APIs and direct DOM interaction, without React, Vue, Angular, or another UI framework.
+
+The application code is written in **TypeScript rather than plain JavaScript**. TypeScript adds static typing and is compiled to JavaScript by the build toolchain before running in the browser. For this reason, the project is best described as **Vanilla TypeScript (HTML, CSS, and JavaScript at runtime)** rather than a pure JavaScript project.
 
 ## Requirements
 
