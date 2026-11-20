@@ -788,10 +788,6 @@
   justify-content:center;
   text-align:center;
 }
-.button--red>span{
-  position:absolute;
-  right:24px;
-}
 @media(max-width:640px){
   .gift-card__media{min-height:190px;padding:14px}
   .gift-card__media img{width:min(100%,150px)}
