@@ -1,41 +1,43 @@
 # Christmas Shop
 
-A festive, responsive gift storefront built with Vite and TypeScript. The project includes a home page, a filterable gift catalogue, bilingual content, and light/dark themes.
+**[Открыть демо проекта](https://artkoro94.github.io/christmas-shop/)**
 
-## Features
+Адаптивный новогодний интернет-магазин подарков. Проект включает главную страницу, каталог с фильтрацией, поддержку русского и английского языков, а также светлую и тёмную темы оформления.
 
-- **Home page** with a seasonal hero, decorative snowfall, an about section, featured gifts, and a New Year countdown.
-- **Gift catalogue** with category filters and a gift-details dialog.
-- **Responsive layouts** for desktop, tablet, and mobile screens.
-- **Mobile navigation** with an animated menu toggle and an accessible expanded state.
-- **Two languages:** Russian and English.
-- **Light and dark themes** with persistent user preferences.
-- **Accessible interactions**, including keyboard-friendly controls, dialog dismissal, and reduced-motion support.
-- **Image loading optimizations**, including native lazy loading for below-the-fold images.
+## Возможности
 
-## Tech stack
+- **Главная страница:** праздничный главный экран, декоративный снегопад, блок «О нас», подборка подарков и обратный отсчёт до Нового года.
+- **Каталог подарков:** фильтрация по категориям и диалоговое окно с подробной информацией о подарке.
+- **Адаптивный интерфейс:** корректное отображение на компьютерах, планшетах и мобильных устройствах.
+- **Мобильная навигация:** анимированное меню с доступным состоянием открытия.
+- **Два языка:** русский и английский.
+- **Две темы оформления:** светлая и тёмная. Выбор пользователя сохраняется.
+- **Доступность:** поддержка клавиатурной навигации, закрытие диалогового окна клавишей Escape и учёт настройки уменьшения анимации.
+- **Оптимизация изображений:** отложенная загрузка изображений, расположенных ниже первого экрана.
 
-- **Vanilla TypeScript** — application logic and DOM interactions, without a UI framework.
-- **HTML5** — semantic page structure.
-- **CSS3** — responsive layouts, theme variables, animations, and motion preferences.
-- [Vite 7](https://vite.dev/) — development server and production bundler.
-- [TypeScript 5.9](https://www.typescriptlang.org/) — strict static type checking.
-- Native browser APIs — HTML dialog, local storage, and DOM events.
+## Стек технологий
 
-## Architecture
+- **Vanilla TypeScript** — логика приложения и взаимодействие с DOM без UI-фреймворков.
+- **HTML5** — семантическая структура страниц.
+- **CSS3** — адаптивная вёрстка, темы оформления, анимации и настройка движения.
+- [Vite 7](https://vite.dev/) — сервер разработки и сборщик проекта.
+- [TypeScript 5.9](https://www.typescriptlang.org/) — строгая статическая типизация.
+- **Нативные API браузера** — HTML Dialog, Local Storage и обработчики DOM-событий.
 
-Christmas Shop is a **framework-free frontend project**. It follows the Vanilla JS approach: the interface is built with native browser APIs and direct DOM interaction, without React, Vue, Angular, or another UI framework.
+## Архитектура
 
-The application code is written in **TypeScript rather than plain JavaScript**. TypeScript adds static typing and is compiled to JavaScript by the build toolchain before running in the browser. For this reason, the project is best described as **Vanilla TypeScript (HTML, CSS, and JavaScript at runtime)** rather than a pure JavaScript project.
+Christmas Shop — frontend-проект без UI-фреймворков. В основе лежит подход **Vanilla JS**: интерфейс создаётся с помощью нативных возможностей браузера и прямого взаимодействия с DOM. React, Vue, Angular и другие UI-фреймворки не используются.
 
-## Requirements
+При этом исходный код приложения написан на **TypeScript**, а не на чистом JavaScript. TypeScript добавляет статическую типизацию и компилируется сборщиком в JavaScript, который выполняется в браузере. Поэтому наиболее точное описание проекта — **Vanilla TypeScript (HTML, CSS и JavaScript во время выполнения)**.
 
-- Node.js **20.19+** or **22.12+**
+## Требования
+
+- Node.js **20.19+** или **22.12+**
 - npm
 
-## Getting started
+## Установка и запуск
 
-Clone the repository and install dependencies:
+Клонируйте репозиторий и установите зависимости:
 
 ```bash
 git clone https://github.com/artkoro94/christmas-shop.git
@@ -43,31 +45,31 @@ cd christmas-shop
 npm install
 ```
 
-Start the local development server:
+Запустите сервер разработки:
 
 ```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite in your terminal (usually http://localhost:5173/).
+Откройте локальный адрес, который Vite выведет в терминале (обычно http://localhost:5173/).
 
-The main pages are:
+Основные страницы:
 
-- Home: `/`
-- Gift catalogue: `/gifts/`
+- Главная: `/`
+- Каталог подарков: `/gifts/`
 
-## Available scripts
+## Доступные команды
 
-| Command | Description |
+| Команда | Назначение |
 | --- | --- |
-| `npm run dev` | Start the Vite development server. |
-| `npm run check` | Run TypeScript type checking without emitting files. |
-| `npm run lint` | Run ESLint. |
-| `npm run build` | Create an optimized production build. |
-| `npm run preview` | Preview the production build locally. |
-| `npm run format` | Format project files with Prettier. |
+| `npm run dev` | Запуск локального сервера разработки. |
+| `npm run check` | Проверка типов TypeScript без генерации файлов. |
+| `npm run lint` | Проверка кода с помощью ESLint. |
+| `npm run build` | Создание оптимизированной production-сборки. |
+| `npm run preview` | Локальный просмотр production-сборки. |
+| `npm run format` | Форматирование файлов с помощью Prettier. |
 
-Run the quality checks and build before submitting changes:
+Перед отправкой изменений рекомендуется выполнить проверки и собрать проект:
 
 ```bash
 npm run check
@@ -75,42 +77,42 @@ npm run lint
 npm run build
 ```
 
-The production build is generated in `dist/`.
+Готовая production-сборка находится в директории `dist/`.
 
-## Project structure
+## Структура проекта
 
 ```text
 .
 ├── gifts/
-│   └── index.html       # Catalogue page entry
+│   └── index.html       # Точка входа страницы каталога
 ├── src/
-│   ├── main.ts          # App rendering, content, and interactions
-│   └── styles.css       # Shared styles, themes, and responsive layouts
-├── index.html           # Home page entry
-├── vite.config.ts       # Vite and deployment base configuration
-├── tsconfig.json        # TypeScript configuration
-├── eslint.config.js     # ESLint configuration
+│   ├── main.ts          # Логика приложения, контент и взаимодействия
+│   └── styles.css       # Общие стили, темы и адаптивная вёрстка
+├── index.html           # Точка входа главной страницы
+├── vite.config.ts       # Конфигурация Vite и путь для деплоя
+├── tsconfig.json        # Конфигурация TypeScript
+├── eslint.config.js     # Конфигурация ESLint
 └── package.json
 ```
 
-## Deployment
+## Деплой
 
-The Vite configuration uses `/christmas-shop/` as the base path for GitHub Pages.
+Для GitHub Pages в конфигурации Vite задан базовый путь `/christmas-shop/`.
 
-To deploy with GitHub Pages:
+Чтобы подготовить проект к публикации:
 
-1. Run `npm run build`.
-2. Configure the Pages deployment to publish the generated `dist/` directory.
-3. Make sure the deployment URL uses the `/christmas-shop/` repository path.
+1. Выполните `npm run build`.
+2. Настройте GitHub Pages на публикацию содержимого директории `dist/`.
+3. Убедитесь, что адрес публикации учитывает путь репозитория `/christmas-shop/`.
 
-For a different hosting path or a custom domain, update the `base` option in `vite.config.ts` to match the target URL.
+При публикации на другом хостинге или использовании собственного домена измените параметр `base` в файле `vite.config.ts` в соответствии с адресом размещения.
 
-## Performance notes
+## Производительность
 
-- Vite bundles and minifies the app for production.
-- The project ships without a runtime framework.
-- Images below the fold use native lazy loading.
-- Both pages share a single TypeScript entry point and stylesheet.
-- Responsive image sizing uses intrinsic dimensions and `object-fit` to reduce layout inconsistencies.
+- Vite объединяет и минифицирует файлы при production-сборке.
+- Проект не использует UI-фреймворки и сторонние библиотеки компонентов.
+- Изображения ниже первого экрана загружаются по мере необходимости с помощью нативного lazy loading.
+- Обе страницы используют общие точку входа TypeScript и таблицу стилей.
+- Для изображений предусмотрено адаптивное масштабирование с помощью `object-fit`.
 
-The original visual assets are retained. Converting suitable images to modern formats such as WebP or AVIF and reviewing their file sizes are possible follow-up optimizations.
+Исходные графические материалы проекта сохранены. В качестве дальнейшего этапа оптимизации можно подготовить версии подходящих изображений в форматах WebP или AVIF и дополнительно проверить их размер.
