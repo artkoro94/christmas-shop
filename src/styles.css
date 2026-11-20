@@ -553,3 +553,38 @@
 @media(prefers-reduced-motion:reduce){
   .winter-flight__legs path,.winter-flight__santa{animation:none!important}
 }
+
+
+/* Minimal snow-white silhouette: one calm decorative flight, no limb jitter */
+.winter-flight{
+  color:#fff;
+  filter:drop-shadow(0 0 5px rgb(255 255 255 / 42%));
+  opacity:0;
+}
+.winter-flight__team{
+  fill:#fff;
+  stroke:#fff;
+}
+.winter-flight__reindeer,
+.winter-flight__reindeer--one,
+.winter-flight__reindeer--two,
+.winter-flight__legs,
+.winter-flight__legs path,
+.winter-flight__santa,
+.winter-flight__sleigh,
+.winter-flight__presents{
+  animation:none!important;
+}
+.winter-flight__sleigh{
+  filter:drop-shadow(0 0 5px rgb(255 255 255 / 24%));
+}
+@keyframes winter-flight-cross{
+  0%{transform:translateX(0) translateY(5px) scale(.86);opacity:0}
+  8%{opacity:.92}
+  48%{transform:translateX(145%) translateY(-3px) scale(1);opacity:1}
+  92%{opacity:.92}
+  100%{transform:translateX(290%) translateY(5px) scale(.88);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .winter-flight{animation:none!important;left:8%;top:5%;opacity:.82;transform:scale(.72);transform-origin:left top}
+}
