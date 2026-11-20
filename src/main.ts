@@ -397,7 +397,7 @@ ${header('home')}
       <span class="hero-kicker">${t('heroKicker')}</span>
       <h1>${t('merry')}<br><em>${t('christmas')}</em></h1>
       <p class="hero-subtitle">${t('heroSubtitle')}</p>
-      <a class="button button--light" href="${import.meta.env.BASE_URL}gifts/">${t('exploreMagic')} <span aria-hidden="true">↗</span></a>
+      <a class="button button--light" href="${import.meta.env.BASE_URL}gifts/">${t('exploreMagic')}</a>
       <span class="hero-signoff">${t('happyNewYear')}</span>
     </div>
     <span class="hero-snow hero-snow--one" aria-hidden="true">✳</span>
@@ -422,10 +422,10 @@ ${header('home')}
       <p>${t('momentsText')}</p>
     </div>
     <div class="moments-track">
-      <article><span>01 / ${t('live')}</span><img src="${asset('sliber/snowman.png')}" alt="${t('snowmanAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>02 / ${t('create')}</span><img src="${asset('sliber/christmas_tree.png')}" alt="${t('treeAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>03 / ${t('love')}</span><img src="${asset('sliber/snow_ball.png')}" alt="${t('snowGlobeAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>04 / ${t('dream')}</span><img src="${asset('sliber/house.png')}" alt="${t('houseAlt')}" width="200" height="200" loading="lazy"></article>
+      <article><span>${t('live')}</span><img src="${asset('sliber/snowman.png')}" alt="${t('snowmanAlt')}" width="200" height="200" loading="lazy"></article>
+      <article><span>${t('create')}</span><img src="${asset('sliber/christmas_tree.png')}" alt="${t('treeAlt')}" width="200" height="200" loading="lazy"></article>
+      <article><span>${t('love')}</span><img src="${asset('sliber/snow_ball.png')}" alt="${t('snowGlobeAlt')}" width="200" height="200" loading="lazy"></article>
+      <article><span>${t('dream')}</span><img src="${asset('sliber/house.png')}" alt="${t('houseAlt')}" width="200" height="200" loading="lazy"></article>
     </div>
   </section>
   <section class="best-section section-shell" id="best">
