@@ -478,7 +478,7 @@ ${header('home')}
       <p>${t('bestText')}</p>
     </div>
     <div class="gift-grid gift-grid--featured">${gifts.slice(0, 4).map(giftCard).join('')}</div>
-    <a class="button button--red" href="${import.meta.env.BASE_URL}gifts/">${t('exploreAll')} <span aria-hidden="true">↗</span></a>
+    <a class="button button--red" href="${import.meta.env.BASE_URL}gifts/">${t('exploreAll')}</a>
   </section>
   <section class="countdown-section">
     <span class="eyebrow">${t('countdownKicker')}</span>
