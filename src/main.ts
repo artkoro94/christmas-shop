@@ -394,15 +394,26 @@ ${header('home')}
       <svg class="winter-flight" viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg">
         <g class="winter-flight__team" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
           <g class="winter-flight__reindeer">
-            <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
-            <path d="M91 100 L83 132 M105 101 L111 132 M128 96 L137 127 M139 96 L153 124" stroke-width="5"/>
+            <g class="winter-flight__antlers">
+              <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
+              <path d="M83 82 Q62 76 58 91" stroke-width="4"/>
+            </g>
+            <g class="winter-flight__legs">
+              <path d="M91 100 L83 132 M128 96 L137 127" stroke-width="5"/>
+              <path d="M105 101 L111 132 M139 96 L153 124" stroke-width="5"/>
+            </g>
             <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
             <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
-            <path d="M83 82 Q62 76 58 91" stroke-width="4"/>
+            <path d="M119 83 Q128 91 139 96" stroke="#f6d6a3" stroke-width="2"/>
           </g>
           <g class="winter-flight__reindeer" transform="translate(112 5) scale(.88)">
-            <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
-            <path d="M91 100 L83 132 M105 101 L111 132 M128 96 L137 127 M139 96 L153 124" stroke-width="5"/>
+            <g class="winter-flight__antlers">
+              <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
+            </g>
+            <g class="winter-flight__legs">
+              <path d="M91 100 L83 132 M128 96 L137 127" stroke-width="5"/>
+              <path d="M105 101 L111 132 M139 96 L153 124" stroke-width="5"/>
+            </g>
             <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
             <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
           </g>
@@ -415,6 +426,11 @@ ${header('home')}
             <path d="M34 30 Q30 8 52 8 Q76 9 72 30 L55 23 Z" fill="#d95764" stroke="#ffd69b" stroke-width="2"/>
             <circle cx="52" cy="8" r="5" fill="#fff0d4" stroke="none"/>
             <path d="M49 67 L66 67 M52 76 L71 76" stroke="#fff0d4" stroke-width="3"/>
+            <g class="winter-flight__presents">
+              <path d="M76 45 L91 45 L91 61 L76 61 Z" fill="#4f8c88" stroke="#fff0d4" stroke-width="2"/>
+              <path d="M83.5 45 V61 M76 50 H91" stroke="#fff0d4" stroke-width="2"/>
+              <path d="M76 45 Q76 37 83 42 Q90 36 91 45" fill="none" stroke="#fff0d4" stroke-width="2"/>
+            </g>
             <path d="M11 90 Q-1 78 -9 87" stroke="#ffd69b" stroke-width="3"/>
           </g>
           <path d="M10 25 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#fff0d4" stroke="none"/>
