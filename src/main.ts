@@ -391,50 +391,79 @@ ${header('home')}
       <span class="winter-moon"></span>
       <span class="winter-stars winter-stars--one"></span>
       <span class="winter-stars winter-stars--two"></span>
-      <svg class="winter-flight" viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg">
-        <g class="winter-flight__team" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-          <g class="winter-flight__reindeer">
-            <g class="winter-flight__antlers">
-              <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
-              <path d="M83 82 Q62 76 58 91" stroke-width="4"/>
+      <svg class="winter-flight" viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <g class="winter-flight__team">
+          <g class="winter-flight__reindeer winter-flight__reindeer--one">
+            <g class="winter-flight__body">
+              <ellipse cx="104" cy="120" rx="48" ry="25" fill="#a96f45" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M128 112 Q145 91 160 91 L174 106 L151 126 L130 128Z" fill="#b97b4b" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M156 97 Q164 77 182 79 Q198 82 199 99 L190 115 L165 112Z" fill="#bd8355" stroke="#f7d79e" stroke-width="3"/>
+              <ellipse cx="195" cy="105" rx="12" ry="8" fill="#e9b887" stroke="#f7d79e" stroke-width="2"/>
+              <circle cx="197" cy="103" r="3" fill="#3c2630"/>
+              <circle cx="180" cy="91" r="3.5" fill="#211b28"/>
+              <path d="M174 81 Q178 74 184 79" fill="none" stroke="#f7d79e" stroke-width="2"/>
+              <path d="M177 80 Q173 62 160 56 M177 80 Q188 65 193 54 M160 56 L147 51 M160 56 L158 40 M193 54 L205 46 M193 54 L194 38" fill="none" stroke="#f7d79e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M69 117 Q54 108 48 114" fill="none" stroke="#f7d79e" stroke-width="4" stroke-linecap="round"/>
             </g>
             <g class="winter-flight__legs">
-              <path d="M91 100 L83 132 M128 96 L137 127" stroke-width="5"/>
-              <path d="M105 101 L111 132 M139 96 L153 124" stroke-width="5"/>
+              <path d="M78 137 L69 169 Q68 174 76 174 L82 173" fill="none" stroke="#e7bd8b" stroke-width="7" stroke-linecap="round"/>
+              <path d="M106 141 L112 170 Q114 175 121 172" fill="none" stroke="#e7bd8b" stroke-width="7" stroke-linecap="round"/>
+              <path d="M133 137 L143 164 Q145 169 151 166" fill="none" stroke="#e7bd8b" stroke-width="7" stroke-linecap="round"/>
             </g>
-            <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
-            <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
-            <path d="M119 83 Q128 91 139 96" stroke="#f6d6a3" stroke-width="2"/>
+            <path d="M145 111 Q156 117 163 124" fill="none" stroke="#f9dfad" stroke-width="3"/>
+            <circle cx="157" cy="122" r="5" fill="#d74d55" stroke="#ffe4b2" stroke-width="2"/>
           </g>
-          <g class="winter-flight__reindeer" transform="translate(112 5) scale(.88)">
-            <g class="winter-flight__antlers">
-              <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
+          <g class="winter-flight__reindeer winter-flight__reindeer--two">
+            <g class="winter-flight__body">
+              <ellipse cx="265" cy="128" rx="42" ry="22" fill="#916044" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M286 119 Q301 99 313 101 L326 114 L308 133 L287 137Z" fill="#a9754c" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M309 105 Q317 86 333 88 Q348 91 348 106 L339 119 L318 117Z" fill="#b78156" stroke="#f7d79e" stroke-width="3"/>
+              <ellipse cx="344" cy="111" rx="10" ry="7" fill="#e9b887" stroke="#f7d79e" stroke-width="2"/>
+              <circle cx="347" cy="109" r="3" fill="#3c2630"/>
+              <circle cx="328" cy="99" r="3.5" fill="#211b28"/>
+              <path d="M322 89 Q326 82 332 87" fill="none" stroke="#f7d79e" stroke-width="2"/>
+              <path d="M325 88 Q320 72 309 66 M325 88 Q338 72 344 62 M309 66 L298 60 M309 66 L308 52 M344 62 L355 54 M344 62 L346 47" fill="none" stroke="#f7d79e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
             <g class="winter-flight__legs">
-              <path d="M91 100 L83 132 M128 96 L137 127" stroke-width="5"/>
-              <path d="M105 101 L111 132 M139 96 L153 124" stroke-width="5"/>
+              <path d="M239 143 L231 173 Q230 178 237 178" fill="none" stroke="#d9ad80" stroke-width="7" stroke-linecap="round"/>
+              <path d="M267 148 L274 174 Q276 179 283 176" fill="none" stroke="#d9ad80" stroke-width="7" stroke-linecap="round"/>
+              <path d="M292 142 L302 168 Q304 173 310 170" fill="none" stroke="#d9ad80" stroke-width="7" stroke-linecap="round"/>
             </g>
-            <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
-            <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
+            <path d="M299 121 Q310 127 316 132" fill="none" stroke="#f9dfad" stroke-width="3"/>
           </g>
-          <path d="M155 93 Q190 75 222 90 L260 92" stroke="#f6c98b" stroke-width="2" stroke-dasharray="5 7"/>
-          <g class="winter-flight__sleigh" transform="translate(260 28)">
-            <path d="M0 91 Q44 112 105 93 L92 108 Q43 127 -4 104" stroke="#ffd69b" stroke-width="5"/>
-            <path d="M15 86 L25 58 Q53 46 82 59 L93 87 Z" fill="#c84d5d" stroke="#ffd69b" stroke-width="3"/>
-            <path d="M28 58 Q30 32 53 30 Q77 31 79 58" fill="#f2c18b" stroke="#ffd69b" stroke-width="3"/>
-            <circle cx="61" cy="43" r="4" fill="#fff0d4" stroke="none"/>
-            <path d="M34 30 Q30 8 52 8 Q76 9 72 30 L55 23 Z" fill="#d95764" stroke="#ffd69b" stroke-width="2"/>
-            <circle cx="52" cy="8" r="5" fill="#fff0d4" stroke="none"/>
-            <path d="M49 67 L66 67 M52 76 L71 76" stroke="#fff0d4" stroke-width="3"/>
+          <path d="M196 121 Q220 94 247 111 M347 116 Q376 91 412 111" fill="none" stroke="#f7d79e" stroke-width="3" stroke-dasharray="5 5"/>
+          <g class="winter-flight__sleigh">
+            <path d="M390 151 Q456 179 555 153 L543 171 Q458 196 389 166 Q378 160 390 151Z" fill="#8b3448" stroke="#f6d79f" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M411 146 L426 111 Q468 94 523 112 L545 150Z" fill="#bd4355" stroke="#f6d79f" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M430 117 Q465 103 508 117" fill="none" stroke="#f8dca9" stroke-width="4"/>
+            <path d="M442 144 L522 144" stroke="#f6d79f" stroke-width="4"/>
+            <g class="winter-flight__santa">
+              <path d="M449 113 Q443 88 456 69 Q472 49 493 68 Q511 83 502 113Z" fill="#e0b28a" stroke="#f8e0b7" stroke-width="3"/>
+              <path d="M448 91 Q430 78 438 57 Q446 36 473 39 Q501 40 507 65 Q492 57 478 66 Q465 76 448 91Z" fill="#bd3f52" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M438 57 Q443 30 469 30 Q495 30 505 57 Q483 48 465 57 Q451 63 438 57Z" fill="#c94758" stroke="#f7d79e" stroke-width="3"/>
+              <circle cx="469" cy="29" r="8" fill="#fff4dc"/>
+              <path d="M450 87 Q471 77 493 88 Q488 111 469 112 Q451 108 450 87Z" fill="#fff1dc" stroke="#f4d8b1" stroke-width="2"/>
+              <path d="M457 91 Q469 85 482 91" fill="none" stroke="#6d4b45" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="461" cy="84" r="3" fill="#352b30"/>
+              <circle cx="482" cy="84" r="3" fill="#352b30"/>
+              <ellipse cx="472" cy="94" rx="5" ry="4" fill="#c66a56"/>
+              <path d="M459 107 Q472 116 486 106" fill="none" stroke="#9b5a4e" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M447 115 Q427 124 433 145 L455 149 L461 117Z" fill="#d94d5c" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M433 142 Q421 150 427 158 Q437 164 445 151" fill="#e0b28a" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M488 115 Q507 118 511 140 L500 148 L485 123Z" fill="#d94d5c" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M500 143 Q511 148 507 157 Q499 164 491 152" fill="#e0b28a" stroke="#f7d79e" stroke-width="3"/>
+              <path d="M453 116 L492 116" stroke="#f7d79e" stroke-width="5"/>
+            </g>
             <g class="winter-flight__presents">
-              <path d="M76 45 L91 45 L91 61 L76 61 Z" fill="#4f8c88" stroke="#fff0d4" stroke-width="2"/>
-              <path d="M83.5 45 V61 M76 50 H91" stroke="#fff0d4" stroke-width="2"/>
-              <path d="M76 45 Q76 37 83 42 Q90 36 91 45" fill="none" stroke="#fff0d4" stroke-width="2"/>
+              <rect x="517" y="79" width="24" height="24" rx="3" fill="#3f8d87" stroke="#fff0d4" stroke-width="2"/>
+              <path d="M529 79 V103 M517 88 H541" stroke="#fff0d4" stroke-width="2.5"/>
+              <path d="M517 79 Q516 69 525 76 Q533 68 541 79" fill="none" stroke="#fff0d4" stroke-width="2.5"/>
+              <rect x="540" y="105" width="20" height="20" rx="3" fill="#d7a64e" stroke="#fff0d4" stroke-width="2"/>
+              <path d="M550 105 V125 M540 113 H560" stroke="#fff0d4" stroke-width="2"/>
             </g>
-            <path d="M11 90 Q-1 78 -9 87" stroke="#ffd69b" stroke-width="3"/>
           </g>
-          <path d="M10 25 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#fff0d4" stroke="none"/>
-          <path d="M390 22 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#fff0d4" stroke="none"/>
+          <path d="M20 32 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5z" fill="#fff0d4"/>
+          <path d="M370 30 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#fff0d4"/>
         </g>
       </svg>
     </div>
