@@ -425,3 +425,13 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .moments-track article{border-radius:22px;gap:14px}
   .moments-track img{width:135px;height:135px;border-radius:22px}
 }
+
+
+/* Gift cards are opened by clicking the card itself; no secondary CTA */
+.gift-card__hint,
+.gift-card__action,
+.gift-card__arrow,
+.gift-card::after{
+  display:none !important;
+  content:none !important;
+}
