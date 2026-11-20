@@ -693,3 +693,107 @@
 :root[data-theme="dark"] .eyebrow--harmony{
   color:#dceaff;
 }
+
+
+/* Catalogue page: match the home page's midnight winter atmosphere */
+:root[data-theme="dark"] .catalog-page,
+:root[data-theme="dark"] .catalog-content{
+  background:#080f20;
+}
+:root[data-theme="dark"] .catalog-hero{
+  position:relative;
+  isolation:isolate;
+  min-height:330px;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(ellipse at 78% 17%,rgb(66 92 145 / 25%),transparent 34%),
+    radial-gradient(ellipse at 48% 100%,rgb(40 67 105 / 28%),transparent 48%),
+    linear-gradient(180deg,#050916 0%,#091329 58%,#101d35 100%);
+}
+:root[data-theme="dark"] .catalog-hero .winter-night{
+  display:block;
+  z-index:0;
+}
+:root[data-theme="dark"] .catalog-hero .snowfall{
+  z-index:1;
+}
+:root[data-theme="dark"] .catalog-hero__content{
+  position:relative;
+  z-index:2;
+}
+:root[data-theme="dark"] .catalog-hero .eyebrow,
+:root[data-theme="dark"] .catalog-hero p{
+  color:#f4f8ff;
+}
+:root[data-theme="dark"] .catalog-sparkle{
+  z-index:2;
+  color:rgb(239 247 255 / 65%);
+}
+:root[data-theme="dark"] .catalog-content{
+  color:#f7faff;
+}
+:root[data-theme="dark"] .catalog-content .results-count,
+:root[data-theme="dark"] .catalog-content .results-count strong,
+:root[data-theme="dark"] .catalog-content .gift-card,
+:root[data-theme="dark"] .catalog-content .gift-card__content,
+:root[data-theme="dark"] .catalog-content .gift-card__title,
+:root[data-theme="dark"] .catalog-content .gift-card__hint,
+:root[data-theme="dark"] .catalog-content .gift-card .eyebrow,
+:root[data-theme="dark"] .catalog-content .empty-state{
+  color:#f4f8ff;
+}
+:root[data-theme="dark"] .catalog-content .gift-card__hint span{
+  color:#e2edff;
+}
+:root[data-theme="dark"] .catalog-content .filter-button{
+  color:#f4f8ff;
+}
+:root[data-theme="dark"] .catalog-content .filter-button:hover,
+:root[data-theme="dark"] .catalog-content .filter-button.is-selected{
+  color:#172238;
+}
+
+/* Center each gift illustration and present it as a round ornament */
+.gift-card__media{
+  min-height:250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.gift-card__media img{
+  display:block;
+  width:min(100%,190px);
+  height:auto;
+  aspect-ratio:1;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center;
+}
+.gift-card__content{
+  align-items:center;
+  text-align:center;
+}
+.gift-card__hint{
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+}
+.gift-card__number{display:none!important}
+
+/* Keep the featured catalogue CTA label mathematically centered */
+.button--red{
+  position:relative;
+  justify-content:center;
+  text-align:center;
+}
+.button--red>span{
+  position:absolute;
+  right:24px;
+}
+@media(max-width:640px){
+  .gift-card__media{min-height:190px;padding:14px}
+  .gift-card__media img{width:min(100%,150px)}
+  :root[data-theme="dark"] .catalog-hero{min-height:290px}
+}
