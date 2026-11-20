@@ -388,6 +388,41 @@ const renderHome = (): string => `
 ${header('home')}
 <main>
   <section class="hero">
+    <div class="winter-night" aria-hidden="true">
+      <span class="winter-moon"></span>
+      <span class="winter-stars winter-stars--one"></span>
+      <span class="winter-stars winter-stars--two"></span>
+      <svg class="winter-flight" viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg">
+        <g class="winter-flight__team" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <g class="winter-flight__reindeer">
+            <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
+            <path d="M91 100 L83 132 M105 101 L111 132 M128 96 L137 127 M139 96 L153 124" stroke-width="5"/>
+            <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
+            <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
+            <path d="M83 82 Q62 76 58 91" stroke-width="4"/>
+          </g>
+          <g class="winter-flight__reindeer" transform="translate(112 5) scale(.88)">
+            <path d="M70 88 Q91 70 119 83 L139 96 M112 83 L128 60 L146 58 M128 60 L119 48 M128 60 L143 43 M128 60 L137 72" stroke-width="5"/>
+            <path d="M91 100 L83 132 M105 101 L111 132 M128 96 L137 127 M139 96 L153 124" stroke-width="5"/>
+            <path d="M141 95 Q151 88 159 93" stroke-width="4"/>
+            <circle cx="148" cy="58" r="3" fill="#ffd6a0" stroke="none"/>
+          </g>
+          <path d="M155 93 Q190 75 222 90 L260 92" stroke="#f6c98b" stroke-width="2" stroke-dasharray="5 7"/>
+          <g class="winter-flight__sleigh" transform="translate(260 28)">
+            <path d="M0 91 Q44 112 105 93 L92 108 Q43 127 -4 104" stroke="#ffd69b" stroke-width="5"/>
+            <path d="M15 86 L25 58 Q53 46 82 59 L93 87 Z" fill="#c84d5d" stroke="#ffd69b" stroke-width="3"/>
+            <path d="M28 58 Q30 32 53 30 Q77 31 79 58" fill="#f2c18b" stroke="#ffd69b" stroke-width="3"/>
+            <circle cx="61" cy="43" r="4" fill="#fff0d4" stroke="none"/>
+            <path d="M34 30 Q30 8 52 8 Q76 9 72 30 L55 23 Z" fill="#d95764" stroke="#ffd69b" stroke-width="2"/>
+            <circle cx="52" cy="8" r="5" fill="#fff0d4" stroke="none"/>
+            <path d="M49 67 L66 67 M52 76 L71 76" stroke="#fff0d4" stroke-width="3"/>
+            <path d="M11 90 Q-1 78 -9 87" stroke="#ffd69b" stroke-width="3"/>
+          </g>
+          <path d="M10 25 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#fff0d4" stroke="none"/>
+          <path d="M390 22 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#fff0d4" stroke="none"/>
+        </g>
+      </svg>
+    </div>
     <div class="snowfall" aria-hidden="true"><span class="snowfall__layer snowfall__layer--back"></span><span class="snowfall__layer snowfall__layer--front"></span></div>
     <div class="hero-art" aria-hidden="true"></div>
     <div class="hero-content">
