@@ -391,49 +391,7 @@ ${header('home')}
       <span class="winter-moon"></span>
       <span class="winter-stars winter-stars--one"></span>
       <span class="winter-stars winter-stars--two"></span>
-      <svg class="winter-flight" viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
-        <g class="winter-flight__team" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Reindeer lead the flight; Santa follows behind in the sleigh. -->
-          <g class="winter-flight__reindeer winter-flight__reindeer--one">
-            <path d="M35 111 Q47 83 91 84 Q119 84 139 101 L160 97 Q174 88 188 96 L198 109 L185 121 L157 119 Q137 139 99 139 L61 133 Q43 129 35 111Z" stroke="none"/>
-            <path d="M157 101 Q164 80 181 79 Q198 80 203 96 L197 111 L174 116Z" stroke="none"/>
-            <path d="M183 80 Q174 62 160 54 M183 80 Q199 65 204 49 M160 54 L147 49 M160 54 L158 37 M204 49 L216 41 M204 49 L205 33" fill="none" stroke-width="5"/>
-            <path d="M61 128 L55 165 L66 165 M91 135 L91 169 L102 169 M130 133 L140 162 L151 162 M151 120 L160 151 L171 151" fill="none" stroke-width="8"/>
-            <path d="M36 103 Q22 94 13 101" fill="none" stroke-width="5"/>
-          </g>
-          <g class="winter-flight__reindeer winter-flight__reindeer--two">
-            <path d="M218 117 Q231 94 267 94 Q294 94 312 109 L331 106 Q344 98 356 105 L365 116 L355 128 L330 126 Q310 143 278 143 L243 137 Q225 132 218 117Z" stroke="none"/>
-            <path d="M328 109 Q335 90 350 89 Q366 90 370 105 L365 119 L344 123Z" stroke="none"/>
-            <path d="M350 90 Q343 73 331 65 M350 90 Q365 76 370 60 M331 65 L319 60 M331 65 L330 50 M370 60 L382 52 M370 60 L371 45" fill="none" stroke-width="5"/>
-            <path d="M244 134 L239 164 L249 164 M274 140 L276 169 L287 169 M309 138 L319 163 L330 163 M329 125 L339 151 L349 151" fill="none" stroke-width="8"/>
-          </g>
-          <path d="M197 111 Q216 96 233 110 M369 113 Q403 93 439 111" fill="none" stroke-width="3" stroke-dasharray="5 8"/>
-          <g class="winter-flight__sleigh">
-            <path d="M423 151 Q482 178 568 150 L551 171 Q482 193 418 165 Q404 158 423 151Z" stroke="none"/>
-            <path d="M438 145 L455 111 Q495 94 548 112 L566 149Z" stroke="none"/>
-            <path d="M447 119 Q497 104 548 119" fill="none" stroke="#142039" stroke-width="4" opacity=".28"/>
-            <g class="winter-flight__santa">
-              <path d="M472 112 Q462 93 470 72 Q480 51 503 52 Q527 54 534 78 L529 113Z" stroke="none"/>
-              <path d="M469 76 Q451 59 463 39 Q477 19 505 26 Q532 30 539 55 Q518 46 502 57 Q486 68 469 76Z" stroke="none"/>
-              <path d="M463 49 Q469 22 495 20 Q523 20 537 49 Q512 41 493 50 Q478 56 463 49Z" stroke="none"/>
-              <circle cx="500" cy="20" r="9" stroke="none"/>
-              <path d="M472 83 Q500 70 527 84 Q523 112 500 116 Q477 111 472 83Z" stroke="none"/>
-              <path d="M480 91 Q500 100 520 91" fill="none" stroke="#142039" stroke-width="3" opacity=".25"/>
-              <path d="M475 113 Q453 125 458 145 L482 151 L489 117Z M514 116 L523 148 L545 143 Q548 122 530 112Z" stroke="none"/>
-              <path d="M458 143 Q446 151 453 162 Q465 168 478 151 M524 145 Q536 150 531 162 Q520 169 510 151" stroke="none"/>
-              <path d="M480 117 L522 117" fill="none" stroke="#142039" stroke-width="5" opacity=".25"/>
-            </g>
-            <g class="winter-flight__presents">
-              <rect x="544" y="77" width="24" height="24" rx="3" stroke="none"/>
-              <path d="M556 77 V101 M544 88 H568" fill="none" stroke="#142039" stroke-width="3" opacity=".25"/>
-              <path d="M544 77 Q543 66 552 74 Q561 66 568 77" fill="none" stroke-width="3"/>
-              <rect x="567" y="105" width="20" height="20" rx="3" stroke="none"/>
-            </g>
-          </g>
-          <path d="M22 30 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5z M390 25 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" stroke="none"/>
-        </g>
-      </svg>
-    </div>
+   </div>
     <div class="snowfall" aria-hidden="true"><span class="snowfall__layer snowfall__layer--back"></span><span class="snowfall__layer snowfall__layer--front"></span></div>
     <div class="hero-art" aria-hidden="true"></div>
     <div class="hero-content">
