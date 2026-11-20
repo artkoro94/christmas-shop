@@ -808,3 +808,47 @@
     right:3%;
   }
 }
+
+
+/* Snow-white typography across every section in dark mode */
+:root[data-theme="dark"] .hero-signoff,
+:root[data-theme="dark"] .about-section,
+:root[data-theme="dark"] .about-section .eyebrow,
+:root[data-theme="dark"] .about-section h2,
+:root[data-theme="dark"] .about-section p,
+:root[data-theme="dark"] .about-section .text-link,
+:root[data-theme="dark"] .moments-section,
+:root[data-theme="dark"] .moments-section .eyebrow,
+:root[data-theme="dark"] .moments-section h2,
+:root[data-theme="dark"] .moments-section p,
+:root[data-theme="dark"] .best-section,
+:root[data-theme="dark"] .best-section .eyebrow,
+:root[data-theme="dark"] .best-section h2,
+:root[data-theme="dark"] .best-section p,
+:root[data-theme="dark"] .gift-card__content,
+:root[data-theme="dark"] .gift-card__content .eyebrow,
+:root[data-theme="dark"] .gift-card__title,
+:root[data-theme="dark"] .gift-card__hint,
+:root[data-theme="dark"] .site-footer .contact-card,
+:root[data-theme="dark"] .site-footer .contact-card strong,
+:root[data-theme="dark"] .site-footer .contact-card span,
+:root[data-theme="dark"] .site-footer .copyright,
+:root[data-theme="dark"] .catalog-content,
+:root[data-theme="dark"] .catalog-content p,
+:root[data-theme="dark"] .catalog-content .results-count,
+:root[data-theme="dark"] .catalog-content .gift-card,
+:root[data-theme="dark"] .catalog-content .gift-card__title,
+:root[data-theme="dark"] .catalog-content .gift-card__hint,
+:root[data-theme="dark"] .catalog-content .gift-card .eyebrow{
+  color:#fff;
+}
+:root[data-theme="dark"] .about-section .text-link:hover,
+:root[data-theme="dark"] .gift-card__hint:hover{
+  color:#fff;
+}
+:root[data-theme="dark"] .countdown-section h2,
+:root[data-theme="dark"] .countdown-section>p,
+:root[data-theme="dark"] .countdown-section .countdown strong,
+:root[data-theme="dark"] .countdown-section .countdown span{
+  color:#fff;
+}
