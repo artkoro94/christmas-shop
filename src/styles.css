@@ -727,3 +727,46 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
     padding:8px 3px;
   }
 }
+
+/* Product attributes belong to the gift details modal, not the catalog cards */
+.gift-card__stats,
+.gift-card__stat{
+  display:none !important;
+}
+.dialog-stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:18px;
+}
+.dialog-stat{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding:12px 6px;
+  border-radius:12px;
+  background:var(--surface, #f2f3f7);
+  text-align:center;
+}
+.dialog-stat span{
+  color:var(--muted);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.dialog-stat strong{
+  color:#e6a936;
+  font-size:12px;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+@media(max-width:420px){
+  .dialog-body{padding:20px 18px 24px}
+  .dialog-stats{gap:6px}
+  .dialog-stat{padding:10px 3px}
+  .dialog-stat span{font-size:8px}
+  .dialog-stat strong{font-size:11px}
+}
