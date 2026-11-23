@@ -770,3 +770,76 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .dialog-stat span{font-size:8px}
   .dialog-stat strong{font-size:11px}
 }
+
+/* Gentle image loading states: keep layout stable while artwork arrives */
+.image-frame{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.image-frame.is-loading{
+  background:linear-gradient(110deg,#25334d 8%,#34435f 18%,#25334d 33%);
+  background-size:200% 100%;
+  animation:image-shimmer 1.45s ease-in-out infinite;
+}
+.image-frame.is-loading::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 25%,rgb(255 255 255 / 9%) 45%,transparent 65%);
+  transform:translateX(-100%);
+  animation:image-sweep 1.6s ease-in-out infinite;
+}
+.image-frame img{
+  opacity:1;
+  transition:opacity .45s ease,filter .45s ease,transform .5s ease;
+}
+.image-frame.is-loading img{
+  opacity:0;
+}
+@keyframes image-shimmer{
+  0%{background-position:100% 0}
+  100%{background-position:-100% 0}
+}
+@keyframes image-sweep{
+  to{transform:translateX(100%)}
+}
+.about-art.image-frame{
+  background-color:#1b2942;
+}
+.about-art.image-frame.is-loading img{
+  opacity:0;
+}
+.moments-image-frame{
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:170px;
+  border-radius:22px;
+  background-color:#263650;
+}
+.moments-image-frame img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.dialog-image.is-loading{
+  opacity:.18;
+  filter:blur(3px);
+  background:linear-gradient(110deg,#25334d 8%,#34435f 18%,#25334d 33%);
+  background-size:200% 100%;
+  animation:image-shimmer 1.45s ease-in-out infinite;
+}
+@media(max-width:640px){
+  .moments-image-frame{height:135px}
+}
+@media(prefers-reduced-motion:reduce){
+  .image-frame.is-loading,
+  .image-frame.is-loading::after,
+  .dialog-image.is-loading{
+    animation:none;
+  }
+  .image-frame img{transition:none}
+}
