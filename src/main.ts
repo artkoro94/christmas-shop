@@ -94,6 +94,11 @@ const translations = {
     findYour: 'Find your',
     magic: 'magic.',
     catalogText: 'Thoughtful gifts for work, health and harmony.',
+    energy: 'Energy',
+    productivity: 'Productivity',
+    price: 'Price',
+    snowCoins: 'snow coins',
+    statsLabel: 'Gift stats',
   },
   ru: {
     home: 'Christmas Shop — Найди своё новогоднее волшебство',
@@ -168,6 +173,11 @@ const translations = {
     findYour: 'Найди своё',
     magic: 'волшебство.',
     catalogText: 'Подарки для работы, здоровья и гармонии.',
+    energy: 'Энергия',
+    productivity: 'Продуктивность',
+    price: 'Цена',
+    snowCoins: 'снежинок',
+    statsLabel: 'Характеристики подарка',
   },
 } satisfies Record<Language, Record<string, string>>;
 
@@ -279,6 +289,14 @@ const giftCountLabel = (count: number): string => {
   return `${count} ${noun}`;
 };
 
+const giftStats = (gift: Gift) => ({
+  energy: [4, 5, 3, 3, 5, 2, 3, 4, 4, 5, 3, 4][gift.id - 1],
+  productivity: [5, 2, 5, 3, 3, 4, 5, 2, 2, 3, 3, 4][gift.id - 1],
+  price: [120, 90, 150, 110, 100, 130, 160, 95, 105, 85, 80, 100][gift.id - 1],
+});
+
+const rating = (value: number): string => `${'★'.repeat(value)}${'☆'.repeat(5 - value)}`;
+
 const categoryLabel = (category: Category): string => ({
   work: t('forWork'),
   health: t('forHealth'),
@@ -293,6 +311,11 @@ const giftCard = (gift: Gift): string => `
   <span class="gift-card__content">
     <span class="eyebrow eyebrow--${gift.category}">${categoryLabel(gift.category)}</span>
     <span class="gift-card__title">${gift.title[language]}</span>
+    <span class="gift-card__stats" aria-label="${t('statsLabel')}">
+      <span class="gift-card__stat"><span>${t('energy')}</span><strong>${rating(giftStats(gift).energy)}</strong></span>
+      <span class="gift-card__stat"><span>${t('productivity')}</span><strong>${rating(giftStats(gift).productivity)}</strong></span>
+    </span>
+    <span class="gift-card__price">${t('price')}: <strong>${giftStats(gift).price} ${t('snowCoins')}</strong></span>
   </span>
 </button>`;
 
@@ -351,6 +374,8 @@ const modal = (): string => `
     <span class="eyebrow dialog-category"></span>
     <h2 id="dialog-title"></h2>
     <p class="dialog-description"></p>
+    <div class="dialog-stats" aria-label="${t('statsLabel')}"></div>
+    <p class="dialog-price"></p>
     <p class="dialog-bonus"></p>
   </div>
 </dialog>`;
@@ -516,7 +541,9 @@ const openGiftDialog = (gift: Gift): void => {
   const title = dialog.querySelector<HTMLElement>('#dialog-title');
   const description = dialog.querySelector<HTMLElement>('.dialog-description');
   const bonus = dialog.querySelector<HTMLElement>('.dialog-bonus');
-  if (!image || !category || !title || !description || !bonus) return;
+  const stats = dialog.querySelector<HTMLElement>('.dialog-stats');
+  const price = dialog.querySelector<HTMLElement>('.dialog-price');
+  if (!image || !category || !title || !description || !bonus || !stats || !price) return;
 
   image.src = asset(gift.image);
   image.alt = gift.imageAlt[language];
@@ -524,6 +551,11 @@ const openGiftDialog = (gift: Gift): void => {
   category.className = `eyebrow eyebrow--${gift.category} dialog-category`;
   title.textContent = gift.title[language];
   description.textContent = gift.description[language];
+  const giftMetrics = giftStats(gift);
+  stats.innerHTML = `
+    <div class="dialog-stat"><span>${t('energy')}</span><strong>${rating(giftMetrics.energy)}</strong></div>
+    <div class="dialog-stat"><span>${t('productivity')}</span><strong>${rating(giftMetrics.productivity)}</strong></div>`;
+  price.innerHTML = `${t('price')}: <strong>${giftMetrics.price} ${t('snowCoins')}</strong>`;
   bonus.textContent = gift.bonus[language];
   dialog.showModal();
 };
