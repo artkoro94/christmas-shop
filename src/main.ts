@@ -314,11 +314,6 @@ const giftCard = (gift: Gift): string => `
   <span class="gift-card__content">
     <span class="eyebrow eyebrow--${gift.category}">${categoryLabel(gift.category)}</span>
     <span class="gift-card__title">${gift.title[language]}</span>
-    <span class="gift-card__stats" aria-label="${t('statsLabel')}">
-      <span class="gift-card__stat"><span>${t('energy')}</span><strong>${rating(giftStats(gift).energy)}</strong></span>
-      <span class="gift-card__stat"><span>${t('productivity')}</span><strong>${rating(giftStats(gift).productivity)}</strong></span>
-      <span class="gift-card__stat"><span>${t('luck')}</span><strong>${rating(giftStats(gift).luck)}</strong></span>
-    </span>
     <span class="gift-card__price">${t('price')}: <strong>${giftStats(gift).price} ${t('snowCoins')}</strong></span>
   </span>
 </button>`;
@@ -378,6 +373,7 @@ const modal = (): string => `
     <span class="eyebrow dialog-category"></span>
     <h2 id="dialog-title"></h2>
     <p class="dialog-description"></p>
+    <div class="dialog-stats" aria-label="${t('statsLabel')}"></div>
     <p class="dialog-bonus"></p>
   </div>
 </dialog>`;
@@ -542,8 +538,9 @@ const openGiftDialog = (gift: Gift): void => {
   const category = dialog.querySelector<HTMLElement>('.dialog-category');
   const title = dialog.querySelector<HTMLElement>('#dialog-title');
   const description = dialog.querySelector<HTMLElement>('.dialog-description');
+  const stats = dialog.querySelector<HTMLElement>('.dialog-stats');
   const bonus = dialog.querySelector<HTMLElement>('.dialog-bonus');
-  if (!image || !category || !title || !description || !bonus) return;
+  if (!image || !category || !title || !description || !stats || !bonus) return;
 
   image.src = asset(gift.image);
   image.alt = gift.imageAlt[language];
@@ -551,6 +548,11 @@ const openGiftDialog = (gift: Gift): void => {
   category.className = `eyebrow eyebrow--${gift.category} dialog-category`;
   title.textContent = gift.title[language];
   description.textContent = gift.description[language];
+  const metrics = giftStats(gift);
+  stats.innerHTML = `
+    <div class="dialog-stat"><span>${t('energy')}</span><strong>${rating(metrics.energy)}</strong></div>
+    <div class="dialog-stat"><span>${t('productivity')}</span><strong>${rating(metrics.productivity)}</strong></div>
+    <div class="dialog-stat"><span>${t('luck')}</span><strong>${rating(metrics.luck)}</strong></div>`;
   bonus.textContent = gift.bonus[language];
   dialog.showModal();
 };
