@@ -913,3 +913,30 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .gift-card__price{font-size:7px;padding:6px}
   .gift-card__price strong{font-size:8px}
 }
+
+/* Tighter text area for mobile gift cards */
+@media(max-width:640px){
+  .gift-card__content{
+    min-height:124px;
+    padding:10px 8px 11px;
+    gap:5px;
+  }
+
+  .gift-card__title{
+    min-height:2.2em;
+    line-height:1.2;
+  }
+
+  .gift-card__price{
+    margin-top:0;
+    padding:5px 8px;
+  }
+}
+
+@media(max-width:360px){
+  .gift-card__content{
+    min-height:116px;
+    padding:9px 6px;
+    gap:4px;
+  }
+}
