@@ -595,12 +595,25 @@ const render = (): void => {
     const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
     menuToggle.setAttribute('aria-expanded', String(!expanded));
     menuToggle.setAttribute('aria-label', expanded ? t('openMenu') : t('closeMenu'));
-    if (mobileNav) mobileNav.hidden = expanded;
+
+    if (mobileNav) {
+      if (expanded) {
+        mobileNav.classList.remove('is-open');
+        mobileNav.hidden = true;
+      } else {
+        mobileNav.hidden = false;
+        window.requestAnimationFrame(() => mobileNav.classList.add('is-open'));
+      }
+    }
+
     document.body.classList.toggle('menu-open', !expanded);
   });
 
   mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-    if (mobileNav) mobileNav.hidden = true;
+    if (mobileNav) {
+      mobileNav.classList.remove('is-open');
+      mobileNav.hidden = true;
+    }
     menuToggle?.setAttribute('aria-expanded', 'false');
     menuToggle?.setAttribute('aria-label', t('openMenu'));
     document.body.classList.remove('menu-open');
