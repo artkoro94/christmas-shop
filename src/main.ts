@@ -550,9 +550,9 @@ const openGiftDialog = (gift: Gift): void => {
   description.textContent = gift.description[language];
   const metrics = giftStats(gift);
   stats.innerHTML = `
-    <div class="dialog-stat"><span>⚡ ${t('energy')}</span><strong>${rating(metrics.energy)}</strong></div>
-    <div class="dialog-stat"><span>💻 ${t('productivity')}</span><strong>${rating(metrics.productivity)}</strong></div>
-    <div class="dialog-stat"><span>🍀 ${t('luck')}</span><strong>${rating(metrics.luck)}</strong></div>`;
+    <div class="dialog-stat"><span>${t('energy')}</span><strong>${rating(metrics.energy)}</strong></div>
+    <div class="dialog-stat"><span>${t('productivity')}</span><strong>${rating(metrics.productivity)}</strong></div>
+    <div class="dialog-stat"><span>${t('luck')}</span><strong>${rating(metrics.luck)}</strong></div>`;
   bonus.textContent = gift.bonus[language];
   dialog.showModal();
 };
