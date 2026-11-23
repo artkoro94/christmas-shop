@@ -710,3 +710,20 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
     justify-content:center;
   }
 }
+
+/* Three compact RPG attributes, shown only on product cards */
+.gift-card__stats{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.dialog-stats,
+.dialog-price{
+  display:none !important;
+}
+@media(max-width:640px){
+  .gift-card__stats{
+    gap:5px;
+  }
+  .gift-card__stat{
+    padding:8px 3px;
+  }
+}
