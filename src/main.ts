@@ -308,7 +308,7 @@ const categoryLabel = (category: Category): string => ({
 
 const giftCard = (gift: Gift): string => `
 <button class="gift-card" type="button" data-gift-id="${gift.id}" aria-label="${t('viewGift')} ${gift.title[language]}">
-  <span class="gift-card__media">
+  <span class="gift-card__media image-frame is-loading" data-image-frame>
     <img src="${asset(gift.image)}" alt="${gift.imageAlt[language]}" width="310" height="230" loading="lazy" decoding="async">
   </span>
   <span class="gift-card__content">
@@ -368,7 +368,7 @@ const footer = (): string => `
 const modal = (): string => `
 <dialog class="gift-dialog" aria-labelledby="dialog-title">
   <form method="dialog"><button class="dialog-close" aria-label="${t('closeDialog')}">×</button></form>
-  <img class="dialog-image" src="" alt="" width="310" height="230">
+  <img class="dialog-image is-loading" src="" alt="" width="310" height="230">
   <div class="dialog-body">
     <span class="eyebrow dialog-category"></span>
     <h2 id="dialog-title"></h2>
@@ -433,7 +433,7 @@ ${header('home')}
       <p>${t('aboutText')}</p>
       <a class="text-link" href="${import.meta.env.BASE_URL}gifts/">${t('findMagic')} <span aria-hidden="true">→</span></a>
     </div>
-    <div class="about-art">
+    <div class="about-art image-frame is-loading" data-image-frame>
       <img src="${asset('pictures/santa.png')}" alt="${language === 'en' ? 'Santa Claus bringing holiday cheer' : 'Санта-Клаус приносит праздничное настроение'}" width="600" height="600" loading="lazy" decoding="async">
       <span class="art-sticker">${t('madeOfWonder')}</span>
     </div>
@@ -445,10 +445,10 @@ ${header('home')}
       <p>${t('momentsText')}</p>
     </div>
     <div class="moments-track">
-      <article><span>${t('live')}</span><img src="${asset('sliber/snowman.png')}" alt="${t('snowmanAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>${t('create')}</span><img src="${asset('sliber/christmas_tree.png')}" alt="${t('treeAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>${t('love')}</span><img src="${asset('sliber/snow_ball.png')}" alt="${t('snowGlobeAlt')}" width="200" height="200" loading="lazy"></article>
-      <article><span>${t('dream')}</span><img src="${asset('sliber/house.png')}" alt="${t('houseAlt')}" width="200" height="200" loading="lazy"></article>
+      <article><span>${t('live')}</span><span class="moments-image-frame image-frame is-loading" data-image-frame><img src="${asset('sliber/snowman.png')}" alt="${t('snowmanAlt')}" width="200" height="200" loading="lazy" decoding="async"></span></article>
+      <article><span>${t('create')}</span><span class="moments-image-frame image-frame is-loading" data-image-frame><img src="${asset('sliber/christmas_tree.png')}" alt="${t('treeAlt')}" width="200" height="200" loading="lazy" decoding="async"></span></article>
+      <article><span>${t('love')}</span><span class="moments-image-frame image-frame is-loading" data-image-frame><img src="${asset('sliber/snow_ball.png')}" alt="${t('snowGlobeAlt')}" width="200" height="200" loading="lazy" decoding="async"></span></article>
+      <article><span>${t('dream')}</span><span class="moments-image-frame image-frame is-loading" data-image-frame><img src="${asset('sliber/house.png')}" alt="${t('houseAlt')}" width="200" height="200" loading="lazy" decoding="async"></span></article>
     </div>
   </section>
   <section class="best-section section-shell" id="best">
@@ -542,6 +542,9 @@ const openGiftDialog = (gift: Gift): void => {
   const bonus = dialog.querySelector<HTMLElement>('.dialog-bonus');
   if (!image || !category || !title || !description || !stats || !bonus) return;
 
+  image.classList.add('is-loading');
+  image.onload = () => image.classList.remove('is-loading');
+  image.onerror = () => image.classList.remove('is-loading');
   image.src = asset(gift.image);
   image.alt = gift.imageAlt[language];
   category.textContent = categoryLabel(gift.category);
@@ -560,6 +563,15 @@ const openGiftDialog = (gift: Gift): void => {
 const render = (): void => {
   updateDocumentLanguage();
   app!.innerHTML = isGiftsPage ? renderGifts() : renderHome();
+
+  app!.querySelectorAll<HTMLElement>('[data-image-frame]').forEach((frame) => {
+    const image = frame.querySelector('img');
+    if (!image) return;
+    const finishLoading = () => frame.classList.remove('is-loading');
+    image.addEventListener('load', finishLoading, { once: true });
+    image.addEventListener('error', finishLoading, { once: true });
+    if (image.complete) finishLoading();
+  });
 
   app!.querySelectorAll<HTMLAnchorElement>('a[href*="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
