@@ -30,6 +30,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: TypeScript check
+        run: npm run check
+
+      - name: ESLint
+        run: npm run lint
+
       - name: Build
         run: npm run build
 
