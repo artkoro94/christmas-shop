@@ -512,3 +512,28 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
     letter-spacing:.1em;
   }
 }
+
+/* Center the About copy on mobile */
+@media(max-width:640px){
+  .about-copy{
+    max-width:600px;
+    margin-inline:auto;
+    text-align:center;
+  }
+
+  .about-copy .eyebrow{
+    text-align:center;
+  }
+
+  .about-copy h2{
+    margin-inline:auto;
+  }
+
+  .about-copy p{
+    margin-inline:auto;
+  }
+
+  .about-copy .text-link{
+    justify-content:center;
+  }
+}
