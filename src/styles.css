@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/* Foundations: fonts, reset, and global defaults                              */
+/* -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 :root{
   font-family:'DM Sans',sans-serif;
@@ -9,9 +12,15 @@
   --serif:'Playfair Display',Georgia,serif;
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;min-width:320px}body.menu-open{overflow:hidden}button,a{font:inherit}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #e58f8f;outline-offset:4px}img{display:block;max-width:100%}[hidden]{display:none!important}
+/* -------------------------------------------------------------------------- */
+/* Shared shell: header and navigation                                         */
+/* -------------------------------------------------------------------------- */
 .site-header{position:sticky;top:0;z-index:20;height:72px;background:rgb(255 255 255 / 94%);backdrop-filter:blur(14px);border-bottom:1px solid rgb(24 28 41 / 6%)}
 .header-inner{width:min(1280px,calc(100% - 48px));height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.13em}.brand img{width:22px}.desktop-nav{display:flex;align-items:center;gap:8px}.desktop-nav a{padding:12px 18px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;transition:background .2s,color .2s}.desktop-nav a:hover,.desktop-nav a.is-active{color:var(--red);background:#fff0ed}
 .menu-toggle{display:none;border:0;background:transparent;width:44px;height:44px;cursor:pointer}.menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:6px auto;transition:transform .2s}.menu-toggle[aria-expanded=true] span:first-child{transform:translateY(4px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-4px) rotate(-45deg)}.mobile-nav{display:none}
+/* -------------------------------------------------------------------------- */
+/* Home page: hero, about, moments, and featured gifts                         */
+/* -------------------------------------------------------------------------- */
 .hero{min-height:650px;position:relative;overflow:hidden;isolation:isolate;display:grid;place-items:center;padding:90px 24px;color:#fff;text-align:center;border-radius:0 0 30px 30px;background:radial-gradient(circle at 50% 42%,#f37a74 0,#d94d50 40%,#a9293c 100%)}
 .hero:before,.hero:after{content:'';position:absolute;border:1px solid rgb(255 255 255 / 17%);border-radius:50%;z-index:-1}.hero:before{width:640px;height:640px}.hero:after{width:850px;height:850px}
 .hero-art{position:absolute;inset:0;z-index:-1;background:url('/christmas-shop/christmas-shop/assets/background/ball_bg.png') center/cover;opacity:.25;mix-blend-mode:screen}.hero-content{max-width:720px}.hero-kicker,.eyebrow{display:block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.hero-kicker{margin-bottom:22px;color:#ffe0d6}
@@ -20,9 +29,15 @@
 .section-shell{width:min(1200px,calc(100% - 48px));margin:auto}.about-section{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;padding-top:130px;padding-bottom:130px}.about-copy{max-width:510px}.eyebrow{color:var(--red)}.about-copy h2,.section-heading h2,.countdown-section h2{margin:18px 0 22px;font:500 clamp(42px,5vw,64px)/1.04 var(--serif);letter-spacing:-.04em}.about-copy p,.section-heading p,.countdown-section>p{color:var(--muted);font-size:14px;line-height:1.9}.text-link{display:inline-flex;gap:14px;margin-top:20px;font-size:12px;font-weight:700}.text-link span{color:var(--red);transition:transform .2s}.text-link:hover span{transform:translateX(5px)}.about-art{min-height:420px;position:relative;display:grid;place-items:center;background:#fff5ee;border-radius:48% 48% 25px 25px;overflow:hidden}.about-art img{width:min(100%,500px);height:auto;object-fit:contain}.art-sticker{position:absolute;bottom:28px;right:18px;display:grid;place-content:center;width:98px;height:98px;border-radius:50%;background:var(--red);color:#fff;text-align:center;font:italic 17px/1.2 var(--serif);transform:rotate(10deg)}
 .moments-section{padding:100px 24px 110px;background:var(--cream);overflow:hidden}.section-heading{text-align:center;max-width:620px;margin:0 auto 48px}.section-heading h2{margin-bottom:12px}.section-heading p{margin:0}.moments-track{width:min(1120px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:auto}.moments-track article{min-width:0;height:245px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 12px 12px;border-radius:18px;background:#fff}.moments-track article span{font-size:9px;font-weight:700;letter-spacing:.15em}.moments-track img{width:170px;height:170px;object-fit:contain}
 .best-section{padding-top:120px;padding-bottom:120px;text-align:center}.gift-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:left}.gift-card{padding:0;border:0;overflow:hidden;border-radius:20px;background:#fff;box-shadow:0 8px 30px rgb(24 28 41 / 6%);text-align:left;cursor:pointer;transition:transform .25s,box-shadow .25s}.gift-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.gift-card__media{display:block;position:relative;overflow:hidden;background:var(--mist)}.gift-card__media img{width:100%;aspect-ratio:310/230;object-fit:cover;transition:transform .5s}.gift-card:hover img{transform:scale(1.04)}.gift-card__number{position:absolute;top:14px;right:14px;color:#fff;font-size:10px;font-weight:700;text-shadow:0 1px 8px #333}.gift-card__content{min-height:130px;padding:20px;display:flex;flex-direction:column;align-items:flex-start}.eyebrow--work{color:#5268c7}.eyebrow--health{color:#168b56}.eyebrow--harmony{color:#c44eb3}.gift-card__title{margin-top:9px;font-size:15px;font-weight:700;line-height:1.35}
+/* -------------------------------------------------------------------------- */
+/* Countdown and catalogue page                                                */
+/* -------------------------------------------------------------------------- */
 .countdown-section{padding:100px 24px;text-align:center;color:#fff;background:linear-gradient(135deg,#b32d42,#e65c58)}.countdown-section .eyebrow{color:#ffd9d1}.countdown-section h2{max-width:700px;margin:18px auto}.countdown-section>p{color:#ffe3df}.countdown{display:flex;justify-content:center;gap:12px;margin-top:40px}.countdown div{width:112px;padding:20px 12px;border:1px solid rgb(255 255 255 / 26%);border-radius:16px;background:rgb(255 255 255 / 9%)}.countdown strong,.countdown span{display:block}.countdown strong{font:500 38px var(--serif)}.countdown span{margin-top:7px;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
 .catalog-page{background:#fff}.catalog-hero{position:relative;overflow:hidden;padding:100px 24px 90px;text-align:center;color:#fff;background:linear-gradient(130deg,#b52d42,#ed625b)}.catalog-hero .eyebrow{color:#ffdcd5}.catalog-hero h1{margin:18px 0;font-size:clamp(60px,8vw,94px)}.catalog-hero p{color:#ffe4de;font-size:14px}.catalog-sparkle{position:absolute;top:25px;right:12%;font-size:70px;color:rgb(255 255 255 / 20%)}
 .catalog-content{width:min(1200px,calc(100% - 48px));margin:auto;padding:55px 0 110px}.catalog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:30px}.filter-list{display:flex;flex-wrap:wrap;gap:8px}.filter-button{padding:11px 15px;border:1px solid #e9e9ed;border-radius:999px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;transition:background .2s,color .2s,border .2s}.filter-button:hover,.filter-button.is-selected{border-color:var(--ink);background:var(--ink);color:#fff}.filter-button span{margin-left:6px;opacity:.7}.results-count{flex-shrink:0;color:var(--muted);font-size:11px}.results-count strong{color:var(--ink)}.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.empty-state{padding:60px 0;text-align:center;color:var(--muted)}
+/* -------------------------------------------------------------------------- */
+/* Footer and gift details dialog                                              */
+/* -------------------------------------------------------------------------- */
 .site-footer{padding:70px 24px 32px;text-align:center}.contact-grid{width:min(1200px,100%);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contact-card{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 12px;border-radius:18px;background:var(--mist);transition:transform .2s,background .2s}.contact-card:hover{transform:translateY(-4px);background:#fff1ed}.contact-card img{width:58px;height:58px;object-fit:contain}.contact-card strong{margin-top:10px;font-size:14px;letter-spacing:.04em}.contact-card span{margin-top:5px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.13em}.social-links{display:flex;justify-content:center;gap:12px;margin:40px 0 22px}.social-links a{width:38px;height:38px;display:grid;place-items:center;border:1px solid #e5e5e8;border-radius:50%;font-weight:700;transition:color .2s,border .2s}.social-links a:hover{color:var(--red);border-color:var(--red)}.copyright,.school-link{color:var(--muted);font-size:11px}.copyright{display:flex;align-items:center;justify-content:center;min-height:40px;margin:20px auto 0;text-align:center;line-height:1.5}.school-link{display:inline-block;margin-top:8px;font:italic 18px var(--serif)}
 .gift-dialog{width:min(430px,calc(100% - 30px));max-width:none;padding:0;border:0;border-radius:24px;overflow:visible;box-shadow:0 20px 80px rgb(0 0 0 / 25%)}.gift-dialog::backdrop{background:rgb(18 21 30 / 68%);backdrop-filter:blur(5px)}.gift-dialog[open]{animation:dialog-in .22s ease-out}@keyframes dialog-in{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}.dialog-image{width:100%;aspect-ratio:310/230;object-fit:cover;border-radius:24px 24px 0 0;background:var(--mist)}.dialog-body{padding:25px 28px 32px}.dialog-body h2{margin:9px 0;font:600 27px var(--serif)}.dialog-description{color:var(--muted);font-size:13px;line-height:1.7}.dialog-bonus{margin:18px 0 0;padding:14px 16px;border-radius:12px;color:var(--red-dark);background:#fff0ed;font-weight:700;font-size:12px}.dialog-close{position:absolute;top:12px;right:12px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;font-size:26px;line-height:1;cursor:pointer;box-shadow:0 4px 15px rgb(0 0 0 / 12%)}
 @media(max-width:900px){.gift-grid,.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-section{gap:30px}.moments-track{grid-template-columns:repeat(2,1fr)}}
@@ -30,7 +45,9 @@
 
 
 
-/* Design tokens */
+/* -------------------------------------------------------------------------- */
+/* Design tokens                                                               */
+/* -------------------------------------------------------------------------- */
 :root{
   color-scheme:light;
   --ink:#20263a;
@@ -46,6 +63,7 @@
   --focus:#d45a65;
   --shadow:0 22px 60px rgb(24 28 41 / 9%);
 }
+/* Theme token overrides                                                        */
 :root[data-theme="dark"]{
   color-scheme:dark;
   --ink:#f6f9ff;
@@ -61,6 +79,9 @@
   --focus:#dceaff;
   --shadow:0 22px 60px rgb(0 0 0 / 28%);
 }
+/* -------------------------------------------------------------------------- */
+/* Theme-aware component surfaces and controls                                 */
+/* -------------------------------------------------------------------------- */
 :root{background:var(--page);color:var(--ink)}
 body{background:var(--page);color:var(--ink)}
 button:focus-visible,a:focus-visible{outline-color:var(--focus)}
@@ -184,6 +205,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 .theme-toggle:hover{transform:rotate(-12deg)}
 .language-toggle:focus-visible,.theme-toggle:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 
+/* -------------------------------------------------------------------------- */
+/* Seasonal decorations: winter night sky                                     */
+/* -------------------------------------------------------------------------- */
 /* Night sky decorations: moon and stars remain; the sleigh artwork is removed */
 .winter-night{
   display:none;
@@ -238,6 +262,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 @keyframes snowfall-back{to{background-position:0 520px}}
 @keyframes snowfall-front{to{background-position:0 460px}}
 
+/* -------------------------------------------------------------------------- */
+/* Dark theme: component-level color and surface overrides                     */
+/* -------------------------------------------------------------------------- */
 /* Dark theme: one coherent midnight-blue and snow-white palette */
 :root[data-theme="dark"] body{background:#080f20;color:#f6f9ff}
 :root[data-theme="dark"] .site-header{
@@ -392,6 +419,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 :root[data-theme="dark"] .catalog-hero__content{position:relative;z-index:2}
 :root[data-theme="dark"] .catalog-hero .catalog-sparkle{z-index:2;right:5%}
 
+/* -------------------------------------------------------------------------- */
+/* Responsive refinements                                                      */
+/* -------------------------------------------------------------------------- */
 /* Small-screen layout and reduced-motion support */
 @media(max-width:640px){
   .header-actions{margin-left:auto;margin-right:8px;gap:6px}
@@ -404,6 +434,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 
 
 
+/* -------------------------------------------------------------------------- */
+/* Component refinements: moments and illustration framing                    */
+/* -------------------------------------------------------------------------- */
 /* Softer, centered moment cards */
 .moments-track article{
   justify-content:center;
@@ -506,6 +539,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/* Component refinements: gift cards and product details                       */
+/* -------------------------------------------------------------------------- */
 /* Gift cards: centered product layout and playful RPG-style stats */
 .gift-card{
   display:flex;
@@ -628,6 +664,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .dialog-stat strong{font-size:11px}
 }
 
+/* -------------------------------------------------------------------------- */
+/* Image loading states                                                        */
+/* -------------------------------------------------------------------------- */
 /* Gentle image loading states: keep layout stable while artwork arrives */
 .image-frame{
   position:relative;
@@ -697,6 +736,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 
 
 
+/* -------------------------------------------------------------------------- */
+/* Responsive product cards                                                    */
+/* -------------------------------------------------------------------------- */
 /* Compact gift cards on phones */
 @media(max-width:640px){
   .gift-grid,
@@ -759,6 +801,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .gift-card__price strong{font-size:8px}
 }
 
+/* -------------------------------------------------------------------------- */
+/* Accessibility: reduced-motion preferences                                   */
+/* -------------------------------------------------------------------------- */
 /* Respect the user's reduced-motion preference across all components */
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{
