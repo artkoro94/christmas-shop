@@ -19,7 +19,7 @@
 .gift-dialog{width:min(430px,calc(100% - 30px));max-width:none;padding:0;border:0;border-radius:24px;overflow:visible;box-shadow:0 20px 80px rgb(0 0 0 / 25%)}.gift-dialog::backdrop{background:rgb(18 21 30 / 68%);backdrop-filter:blur(5px)}.gift-dialog[open]{animation:dialog-in .22s ease-out}@keyframes dialog-in{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}.dialog-image{width:100%;aspect-ratio:310/230;object-fit:cover;border-radius:24px 24px 0 0;background:var(--mist)}.dialog-body{padding:25px 28px 32px}.dialog-body h2{margin:9px 0;font:600 27px var(--serif)}.dialog-description{color:var(--muted);font-size:13px;line-height:1.7}.dialog-bonus{margin:18px 0 0;padding:14px 16px;border-radius:12px;color:var(--red-dark);background:#fff0ed;font-weight:700;font-size:12px}.dialog-close{position:absolute;top:12px;right:12px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;font-size:26px;line-height:1;cursor:pointer;box-shadow:0 4px 15px rgb(0 0 0 / 12%)}
 @media(max-width:900px){.gift-grid,.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-section{gap:30px}.moments-track{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.site-header{height:64px}.header-inner{width:calc(100% - 32px)}.desktop-nav{display:none}.menu-toggle{display:block}.mobile-nav:not([hidden]){position:absolute;top:64px;left:0;right:0;display:flex;flex-direction:column;gap:5px;max-height:0;overflow:hidden;padding:0 24px;background:#fff;box-shadow:0 20px 30px rgb(0 0 0 / 8%);opacity:0;transform:translateY(-10px);transition:max-height .42s cubic-bezier(.22,1,.36,1),padding .32s ease,opacity .24s ease,transform .36s cubic-bezier(.22,1,.36,1)}.mobile-nav:not([hidden]).is-open{max-height:360px;padding:26px 24px 32px;opacity:1;transform:translateY(0)}.mobile-nav a{padding:13px 8px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.hero{min-height:590px;padding:75px 20px;border-radius:0 0 22px 22px}.hero h1{font-size:clamp(64px,19vw,92px)}.hero-subtitle{font-size:10px}.hero-snow--one{left:7%;top:12%}.hero-snow--two{right:8%;bottom:12%}.section-shell{width:calc(100% - 36px)}.about-section{grid-template-columns:1fr;padding:80px 0;gap:35px}.about-copy h2,.section-heading h2,.countdown-section h2{font-size:43px}.about-art{min-height:320px}.moments-section{padding:75px 18px}.moments-track{gap:10px}.moments-track article{height:190px}.moments-track img{width:135px;height:135px}.best-section{padding:80px 0}.gift-grid,.catalog-grid{gap:11px}.gift-card__content{min-height:125px;padding:14px}.gift-card__title{font-size:13px}.countdown-section{padding:75px 16px}.countdown{gap:6px}.countdown div{width:23%;padding:15px 5px}.countdown strong{font-size:28px}.countdown span{font-size:8px}.catalog-hero{padding:78px 18px 65px}.catalog-content{width:calc(100% - 32px);padding:35px 0 75px}.catalog-toolbar{align-items:flex-start;flex-direction:column;gap:12px}.filter-list{gap:6px}.filter-button{padding:10px 12px;font-size:10px}.contact-grid{grid-template-columns:1fr}.contact-card{min-height:150px}.site-footer{padding-top:55px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 
 
 /* Design tokens */
@@ -393,10 +393,7 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .winter-stars--one{opacity:.58}
   :root[data-theme="dark"] .catalog-hero{min-height:290px}
 }
-@media(prefers-reduced-motion:reduce){
-  .winter-stars,.snowfall__layer{animation:none!important;will-change:auto}
-  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-}
+
 
 
 /* Softer, centered moment cards */
@@ -687,22 +684,10 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 @media(max-width:640px){
   .moments-image-frame{height:135px}
 }
-@media(prefers-reduced-motion:reduce){
-  .image-frame.is-loading,
-  .image-frame.is-loading::after,
-  .dialog-image.is-loading{
-    animation:none;
-  }
-  .image-frame img{transition:none}
-}
 
 
-@media(prefers-reduced-motion:reduce){
-  .mobile-nav:not([hidden]){
-    transition:none !important;
-    transform:none;
-  }
-}
+
+
 
 /* Compact gift cards on phones */
 @media(max-width:640px){
@@ -766,3 +751,24 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .gift-card__price strong{font-size:8px}
 }
 
+/* Respect the user's reduced-motion preference across all components */
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+
+  .winter-stars,
+  .snowfall__layer,
+  .image-frame.is-loading,
+  .image-frame.is-loading::after,
+  .dialog-image.is-loading{
+    animation:none!important;
+    will-change:auto;
+  }
+
+  .image-frame img{transition:none}
+  .mobile-nav:not([hidden]){transform:none}
+}
