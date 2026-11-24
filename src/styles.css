@@ -296,7 +296,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 :root[data-theme="dark"] .results-count strong,
 :root[data-theme="dark"] .gift-card,
 :root[data-theme="dark"] .gift-card__title,
-:root[data-theme="dark"] .gift-card__hint,
 :root[data-theme="dark"] .gift-card .eyebrow,
 :root[data-theme="dark"] .site-footer,
 :root[data-theme="dark"] .contact-card,
@@ -329,7 +328,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   box-shadow:0 12px 32px rgb(0 0 0 / 16%);
 }
 :root[data-theme="dark"] .gift-card__media{background:#303b55}
-:root[data-theme="dark"] .gift-card__hint span,
 :root[data-theme="dark"] .text-link span{color:#e2edff}
 :root[data-theme="dark"] .countdown div{
   background:rgb(218 233 255 / 7%);
@@ -425,15 +423,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   .moments-track img{width:135px;height:135px;border-radius:22px}
 }
 
-
-/* Gift cards are opened by clicking the card itself; no secondary CTA */
-.gift-card__hint,
-.gift-card__action,
-.gift-card__arrow,
-.gift-card::after{
-  display:none !important;
-  content:none !important;
-}
 
 
 /* Keep the illustration aligned with the full arch frame */
@@ -592,15 +581,13 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 .dialog-bonus{
   margin-top:14px;
 }
-:root[data-theme="dark"] .gift-card__stat,
 :root[data-theme="dark"] .dialog-stat{
   background:#2b3852;
 }
 :root[data-theme="dark"] .gift-card__price{
   border-color:#42506b;
 }
-:root[data-theme="dark"] .gift-card__price strong,
-:root[data-theme="dark"] .dialog-price strong{
+:root[data-theme="dark"] .gift-card__price strong{
   color:#f5f7ff;
 }
 @media(max-width:640px){
@@ -638,10 +625,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 }
 
 /* Product attributes belong to the gift details modal, not the catalog cards */
-.gift-card__stats,
-.gift-card__stat{
-  display:none !important;
-}
 .dialog-stats{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
