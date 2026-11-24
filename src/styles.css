@@ -552,32 +552,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   color:var(--ink);
   font-size:11px;
 }
-.dialog-stats{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:20px;
-}
-.dialog-stat{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  padding:14px;
-  border-radius:12px;
-  background:var(--surface, #f2f3f7);
-}
-.dialog-stat span{
-  color:var(--muted);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-}
-.dialog-stat strong{
-  color:#e6a936;
-  font-size:15px;
-  letter-spacing:.1em;
-}
 .dialog-bonus{
   margin-top:14px;
 }
@@ -589,20 +563,6 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 }
 :root[data-theme="dark"] .gift-card__price strong{
   color:#f5f7ff;
-}
-@media(max-width:640px){
-  .gift-card__content{
-    min-height:215px;
-    gap:10px;
-    padding:16px 10px;
-  }
-  .gift-card__title{
-    font-size:13px;
-  }
-  .gift-card__price{
-    font-size:9px;
-    padding:7px 9px;
-  }
 }
 
 /* Center About section content on narrow screens */
@@ -764,9 +724,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   }
 
   .gift-card__content{
-    min-height:142px;
-    padding:13px 9px 14px;
-    gap:7px;
+    min-height:124px;
+    padding:10px 8px 11px;
+    gap:5px;
     justify-content:center;
   }
 
@@ -777,17 +737,17 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
   }
 
   .gift-card__title{
-    min-height:2.5em;
+    min-height:2.2em;
     margin:0;
     font-size:12px;
-    line-height:1.25;
+    line-height:1.2;
   }
 
   .gift-card__price{
     gap:3px;
     max-width:100%;
-    margin-top:2px;
-    padding:6px 8px;
+    margin-top:0;
+    padding:5px 8px;
     font-size:8px;
     line-height:1.25;
   }
@@ -800,35 +760,9 @@ button:focus-visible,a:focus-visible{outline-color:var(--focus)}
 @media(max-width:360px){
   .gift-grid,
   .catalog-grid{gap:9px}
-  .gift-card__content{min-height:136px;padding-inline:6px}
+  .gift-card__content{min-height:116px;padding:9px 6px;gap:4px}
   .gift-card__title{font-size:11px}
   .gift-card__price{font-size:7px;padding:6px}
   .gift-card__price strong{font-size:8px}
 }
 
-/* Tighter text area for mobile gift cards */
-@media(max-width:640px){
-  .gift-card__content{
-    min-height:124px;
-    padding:10px 8px 11px;
-    gap:5px;
-  }
-
-  .gift-card__title{
-    min-height:2.2em;
-    line-height:1.2;
-  }
-
-  .gift-card__price{
-    margin-top:0;
-    padding:5px 8px;
-  }
-}
-
-@media(max-width:360px){
-  .gift-card__content{
-    min-height:116px;
-    padding:9px 6px;
-    gap:4px;
-  }
-}
